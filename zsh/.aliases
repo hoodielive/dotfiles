@@ -11,3 +11,5 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
 # aliases 
 alias mv="mv -v"
+alias cp="cp -v"
+alias updateshit="apt-get update -y && sudo apt-get upgrade -y"
