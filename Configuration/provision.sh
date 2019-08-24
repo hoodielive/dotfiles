@@ -1,12 +1,13 @@
 #!/bin/bash 
 
-#  1 Update the System and Validate it is completely up-to-date. 
 # First figure out what system this is redhat, debian, suse, arch, gentoo.
+J
+# Update the System and Validate it is completely up-to-date. 
 
+# Each distro has development tools - make sure to install them along with clang.
 
-# 2 Install development tools.
+# Read in a file that lists the packages you want installed on the system. 
 
-# 3 Read in a file that lists the packages you want installed on the system. 
 # First verify that all 3rd party repos are up-to-date. 
 
 # Configurations can be a part of a case statement.
@@ -18,6 +19,8 @@ if zsh is not installed
     install it and set zhann as the default zsh environment
     set zsh as the default shell for user or perhaps globally for ALL users 
 fi
+
+install neovim, vim and emacs
 
 # rbenv Configuration 
 if the build tools are installed 
@@ -36,3 +39,71 @@ if ruby is installed
 fi
 
 # Is gem installed?
+if gem is installed 
+    echo "The gem home environment is " gem env home function 
+    gem install bundler 
+    gem install rails 
+    gem install pry 
+    gem install neovim
+else
+    echo "gem is not installed." && install it && run test again 
+
+
+# NodeJS
+curl nvm and install v12
+npm install -g cli-highlight, create-react-app, express generator, typescript, neovim
+
+
+# Python3 
+if python3 is installed
+    if pip3 is installed
+        pip3 install neovim, bpython, ptpython, ptipython 
+if python3 is not installed 
+    $PACKAGE_MANAGER install python3, pip3 
+        pip3 install neovim, bpython, ptpython, ptipython 
+fi
+
+# Golang 
+install golang 
+
+# Rust 
+install rustup 
+
+# Haskell 
+install haskell 
+
+# Racket 
+install racket 
+
+# Crystal 
+install crystal 
+
+# Erlang 
+install erlang 
+
+# Elixir 
+install elixir
+
+# Perl6
+install perl6
+
+# PHP / Composer 
+install php7 composer laravel
+
+# Virtualization 
+install VirtualBox, Vagrant, Terraform, Docker and Habor 
+
+# Graphics / Video / 3D 
+blender3d, natron, lightworks, gimp, inkscape, scribus
+
+# API 
+httpie, jq
+
+# Parser and Regex support 
+ripgrep, sift, ag, ack
+
+# Email Support 
+neomutt, thunderbird or evolution
+
+# Windows apps on linux 
+playonlinux
