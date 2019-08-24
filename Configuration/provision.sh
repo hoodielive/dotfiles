@@ -63,6 +63,8 @@ if python3 is not installed
         pip3 install neovim, bpython, ptpython, ptipython 
 fi
 
+# Csharp
+
 # Golang 
 install golang 
 
