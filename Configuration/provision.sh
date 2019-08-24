@@ -1,8 +1,11 @@
 #!/bin/bash 
 
 # First figure out what system this is redhat, debian, suse, arch, gentoo.
-J
+# Then check disk space and memory 
+
 # Update the System and Validate it is completely up-to-date. 
+# Remove broken symlinks and dependencies 
+
 
 # Each distro has development tools - make sure to install them along with clang.
 
@@ -64,6 +67,7 @@ if python3 is not installed
 fi
 
 # Csharp
+install csharp (mono)
 
 # Golang 
 install golang 
@@ -102,10 +106,57 @@ blender3d, natron, lightworks, gimp, inkscape, scribus
 httpie, jq
 
 # Parser and Regex support 
-ripgrep, sift, ag, ack
+ripgrep, sift, ag, ack, pt, ucg, git grep
 
 # Email Support 
 neomutt, thunderbird or evolution
 
 # Windows apps on linux 
 playonlinux
+
+# IDE 
+monodevelop 
+
+# visualcode 
+curl 
+extract 
+install 
+code install plugins
+
+# visual studio (unity)
+just install
+
+# rider (unity)
+just install
+
+# monodevelop ide 
+just install
+
+# neovim configuration 
+make .config/nvim/init.vim
+import basic neovim configuration and inoremap jj <ESC>  
+update remote 
+pluginstall
+plugupdate 
+plugclean
+
+# doom emacs configuration
+emacs vs25-26
+clone doom 
+change to development branch 
+quickstart
+
+# Fonts 
+mono dank 
+fira code
+fc-cache -fv 
+
+# Icons 
+paper themes 
+
+# Themes 
+
+# Wallpaper 
+    # Low Poly 
+    # Unsplash
+
