@@ -15,11 +15,13 @@
 
 # Configurations can be a part of a case statement.
 
-# ZSH Configuration
-if zsh is installed 
-    curl oh-my-zsh 
+# ZSH Configuration 
+if zsh is installed  - How would you test if zsh is installed ?
+    curl oh-my-zsh  - Yes but is curl installed because on ubuntu it is not installed by default.
 if zsh is not installed 
-    install it and set zhann as the default zsh environment
+    install it  - Yes but is the Logic present to install based upon distro variant?
+    && and set zhann as the default zsh environment
+    source it && 
     set zsh as the default shell for user or perhaps globally for ALL users 
 fi
 
