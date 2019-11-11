@@ -63,5 +63,6 @@ fi
 # FIXME Because this is unneccessary in the context of an if statement; use a case instead. 
 
 if ${NETWORK_ACTIVE} -eq true && ${OS} -eq 'ubuntu'; then 
-	sudo apt update -y && sudo apt full-upgrade -y
+	# FIXME
+	{ubuntu,redhat,gentoo,opensuse,arch}_update 1&2>/dev/null
 fi
