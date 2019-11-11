@@ -1,3 +1,4 @@
+
 #!/bin/sh
 set -x
 
@@ -32,4 +33,3 @@ else
 	echo "The Network is not up.. "
 	exit 2
 fi
-
