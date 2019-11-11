@@ -6,6 +6,33 @@ OS_RELEASE=/etc/os-release
 OS=
 NETWORK_ACTIVE=false
 
+# Functions. 
+ubuntu_update() 
+{
+	sudo apt update -y && sudo apt full-upgrade -y
+}
+
+red_hat_update() 
+{
+	sudo yum update -y
+}
+
+opensuse_update()
+{
+	sudo zypper update -y
+}
+
+gentoo_update()
+{
+	# FIXME this shit will take 9 days lol. 
+	sudo emerge -Sync 
+}
+
+arch_update()
+{
+	sudo pacman -Syyu
+}
+
 # Figure out what system this is: redhat, debian, suse, arch, gentoo.
 
 if egrep -q -i redhat ${OS_RELEASE}; then
