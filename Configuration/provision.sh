@@ -1,6 +1,33 @@
 #!/bin/bash 
+set -e 
+set -x
+
+unset OS_RELEASE
+unset OS
+J
+OS_RELEASE="/etc/os-release"
+OS=""
 
 # First figure out what system this is redhat, debian, suse, arch, gentoo.
+
+if fgrep -q -i debian $OS_RELEASE; then
+	OS="debian"
+elif fgrep -q -i redhat /etc/os-release; then 
+	OS="redhat"
+elif fgrep -q -i ubuntu /etc/os-release; then 
+	OS="ubuntu"
+elif fgrep -q -i opensuse /etc/os-release; then 
+	OS="opensuse"
+elif fgrep -q -i freebsd /etc/*-release; then 
+	OS="freebsd"
+else
+	UNPROVISION="true"
+fi 
+
+# FIXME
+# Perhaps we should determine that in the case there is an instance of debian, we should ascertain specifically what 
+# flavor of debian we are provisioning. 
+
 # Then check disk space and memory 
 
 # Update the System and Validate it is completely up-to-date. 
