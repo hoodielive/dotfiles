@@ -6,12 +6,12 @@ OS_RELEASE=/etc/os-release
 OS=
 NETWORK_ACTIVE=false
 
-# First figure out what system this is redhat, debian, suse, arch, gentoo.
+# Figure out what system this is: redhat, debian, suse, arch, gentoo.
 
-if egrep -q -i ubuntu ${OS_RELEASE}; then
-	OS="ubuntu"
-elif egrep -q -i redhat ${OS_RELEASE}; then
+if egrep -q -i redhat ${OS_RELEASE}; then
 	OS="redhat" 
+elif egrep -q -i ubuntu ${OS_RELEASE}; then
+	OS="ubuntu"
 elif egrep -q -i opensuse ${OS_RELEASE}; then
 	OS="opensuse"
 elif egrep -q -i arch ${OS_RELEASE}; then
@@ -24,11 +24,17 @@ else
 	NOT_PROVISIONED="true"
 fi
 
-# Is the network up 
+# Is the network up?
 
 if systemctl is-active NetworkManager > /dev/null; then 
 	NETWORK_ACTIVE=true
 else
-	echo "The Network is not up.. "
+	NETWORK_ACTIVE=false
 	exit 2
+fi
+
+# FIXME Because this is unneccessary in the context of an if statement; use a case instead. 
+
+if ${NETWORK_ACTIVE} -eq true && ${OS} -eq 'ubuntu'; then 
+	sudo apt update -y && sudo apt full-upgrade -y
 fi
