@@ -4,15 +4,14 @@ set -x
 
 OS_RELEASE=/etc/os-release
 OS=
+NETWORK_ACTIVE=false
 
 # First figure out what system this is redhat, debian, suse, arch, gentoo.
 
-if egrep -q -i debian ${OS_RELEASE}; then
-	OS="debian"
+if egrep -q -i ubuntu ${OS_RELEASE}; then
+	OS="ubuntu"
 elif egrep -q -i redhat ${OS_RELEASE}; then
 	OS="redhat" 
-elif egrep -q -i ubuntu ${OS_RELEASE}; then
-	OS="ubuntu"
 elif egrep -q -i opensuse ${OS_RELEASE}; then
 	OS="opensuse"
 elif egrep -q -i arch ${OS_RELEASE}; then
@@ -27,8 +26,8 @@ fi
 
 # Is the network up 
 
-if systemctl is-active NetworkManager; then 
-	continue 
+if systemctl is-active NetworkManager > /dev/null; then 
+	NETWORK_ACTIVE=true
 else
 	echo "The Network is not up.. "
 	exit 2
