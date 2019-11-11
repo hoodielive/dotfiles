@@ -1,27 +1,36 @@
-#!/bin/bash
-set -e
+#!/bin/sh
 set -x
 
-unset OS_RELEASE
-unset OS
-
-OS_RELEASE="/etc/os-release"
-OS=""
+OS_RELEASE=/etc/os-release
+OS=
 
 # First figure out what system this is redhat, debian, suse, arch, gentoo.
 
-if egrep -q -i debian $OS_RELEASE; then
+if egrep -q -i debian ${OS_RELEASE}; then
 	OS="debian"
-elif egrep -q -i redhat /etc/os-release; then
-	OS="redhat"
-elif egrep -q -i ubuntu /etc/os-release; then
+elif egrep -q -i redhat ${OS_RELEASE}; then
+	OS="redhat" 
+elif egrep -q -i ubuntu ${OS_RELEASE}; then
 	OS="ubuntu"
-elif egrep -q -i opensuse /etc/os-release; then
+elif egrep -q -i opensuse ${OS_RELEASE}; then
 	OS="opensuse"
-elif egrep -q -i freebsd /etc/*-release; then
+elif egrep -q -i arch ${OS_RELEASE}; then
+	OS="arch"
+elif egrep -q -i gentoo ${OS_RELEASE}; then
+	OS="gentoo"
+elif egrep -q -i freebsd ${OS_RELEASE}; then
 	OS="freebsd"
 else
-	UNPROVISION="true"
+	NOT_PROVISIONED="true"
+fi
+
+# Is the network up 
+
+if systemctl is-active NetworkManager; then 
+	continue 
+else
+	echo "The Network is not up.. "
+	exit 2
 fi
 
 # FIXME
@@ -33,8 +42,10 @@ fi
 # Update the System and Validate it is completely up-to-date.
 # Remove broken symlinks and dependencies
 
-
 # Each distro has development tools - make sure to install them along with clang.
+# build-essential (ubuntu)
+# base-devel (arch, manjaro)
+# development-tools (redhat)
 
 # Read in a file that lists the packages you want installed on the system.
 
@@ -58,7 +69,7 @@ install neovim, vim and emacs
 if the build tools are installed
     git clone rbenv and ruby-build
 if build tools are not installed
-    install build tools
+    install build tools # Yes but is there a reason to re-check this seeing that you've already ensured that they are installed? 
     git clone rbenv and ruby-build
 fi
 
