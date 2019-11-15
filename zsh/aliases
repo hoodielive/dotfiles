@@ -1,0 +1,65 @@
+# Environment Variables 
+
+# XDEBUG_CONFIG="idekey=VSCODE"
+
+# NVM for NodeJS support.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Go Binaries.
+
+export PATH=$PATH:/usr/local/go/bin
+
+# Composer/Plugins.
+
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Export local bin to $PATH.
+
+export PATH="${PATH}:${HOME}/.local/bin/"
+
+# Cargo/Rust
+
+export PATH="${PATH}:$HOME/.cargo/env"
+
+# Custom aliases.
+
+# I always want move/rename to be verbose.
+
+alias mv="mv -v"
+
+# I always want copies to be verbose.
+alias cp="cp -v"
+
+# I have no intention to use vim, so if I type vim invoke nvim instead.
+
+alias vim="nvim"
+
+# Provide syntax highlighting to --stdout
+
+alias hl="highlight"
+
+# Go to git clones. 
+
+alias clones="cd ~/Clones"
+
+# For quick concept exploration, go to dope folder. 
+
+alias clonesd="cd ~/Clones/dope"
+
+# Open the aliases file for updates or verifications. 
+
+alias openaliases="nvim ~/.aliases"
+
+# C# package management. 
+
+alias nuget="mono /usr/local/bin/nuget.exe"
+
+# Source my .zshrc file after updates.
+
+alias siz="source ~/.zshrc && echo Sourced!"
+
+# Update init.vim { Plugins and Customizations }.
+alias nvimconfig="nvim ~/.config/nvim/init.vim"
+
