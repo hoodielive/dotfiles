@@ -74,7 +74,8 @@ if build tools are not installed
 fi
 
 if ruby is installed
-    if it is 2.6.3
+if $(which ruby) 2>&1 > /dev/null; then 
+	if it is 2.6.3 (ruby --version | awk '{ print $2 }')
         continue
     else
         rbenv install 2.6.3
