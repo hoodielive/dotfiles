@@ -7,4 +7,17 @@ Good Commits are Important
 	3. Code Reviews. 
 	4. Rolling back. 
 	5. Associating the code with an issue or ticket. 
+- 
+- You do not have to commit with: git commit -m 
+
+A Good Commit Message: 
+---
+git-rebase: don't ignore unexpected command line args 
+
+Currently, git-rebase will silently ignore any unexpected command-line
+switches and arguments (the command-line produced by git rev-parse).
+This allowed the rev-parse bug, fixed in the preceding commits, to go 
+unnoticed. Let's make sure that doesn't happen again. We shouldn't be 
+ignoring unexpected arguments. Let's not.
+... 
 
