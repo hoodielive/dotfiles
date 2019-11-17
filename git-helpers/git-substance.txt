@@ -1,0 +1,10 @@
+Good Commits are Important
+
+- Good commits help preserve the history of the code base. 
+- They help with: 
+	1. Debugging & troubleshooting.
+	2. Creating release notes. 
+	3. Code Reviews. 
+	4. Rolling back. 
+	5. Associating the code with an issue or ticket. 
+
