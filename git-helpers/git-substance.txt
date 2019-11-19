@@ -35,7 +35,10 @@ History/Diffs
 - git log --name-status --follow -- <file> (find file that was renamed)
 - git log --grep <regexp> 
   git log --grep=mail --author=larry --since=2.weeks 
-- git --diff-filter=R --stat (selectively include/exclude files that have been Added, Deleted or Modified)
+  git log --grep='i18n' --author=larry --since=2.weeks 
+- git log --diff-filter=R --stat (selectively include/exclude files that have been Added, Deleted or Modified)
+- git log --diff-filter=M --oneline 
+- git log --diff-filter=R --find-renames
 
 - ^ or ^n 
   ^ == ^1: the first parent commit 
@@ -55,7 +58,4 @@ Diff shows you changes:
 - between commits, staging area/repo, working area 
 
 - git diff (unstaged changes)
-- git diff --staged (staged changes)
-- git branch --merged master 
-- git branch --no-merged master 
-
+- git diff --staged (staged changes) git branch --merged master git branch --no-merged master 
