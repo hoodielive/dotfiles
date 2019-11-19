@@ -21,3 +21,41 @@ unnoticed. Let's make sure that doesn't happen again. We shouldn't be
 ignoring unexpected arguments. Let's not.
 ... 
 
+Good Git commit message Practices: 
+	Commit message is in future tense or past tense? 'Fix' vs 'Fixed'. 
+	Short subject, followed by a blank line. 
+	A description of the current behavior, a short summary of 'why' the fix is need. 
+	Mention side effects.
+
+
+History/Diffs 
+- git log 
+- git log --since="yesterday" 
+- git log --since="2 weeks ago"
+- git log --name-status --follow -- <file> (find file that was renamed)
+- git log --grep <regexp> 
+  git log --grep=mail --author=larry --since=2.weeks 
+- git --diff-filter=R --stat (selectively include/exclude files that have been Added, Deleted or Modified)
+
+- ^ or ^n 
+  ^ == ^1: the first parent commit 
+  n: the nth parent commit 
+- ~ or ~n
+  no args: == ~1: the first commit <back>, folllowing the 1st parent 
+  n: args of commits <back>, <following> only 1st parent 
+
+Note: ^ and ~ can be combined 
+
+- git show <commit> 
+- git show <commit> --stat (show files changed in commit)
+- git show <commit>:<file> (look at a file from another commit)
+
+
+Diff shows you changes: 
+- between commits, staging area/repo, working area 
+
+- git diff (unstaged changes)
+- git diff --staged (staged changes)
+- git branch --merged master 
+- git branch --no-merged master 
+
