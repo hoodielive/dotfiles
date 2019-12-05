@@ -126,10 +126,9 @@ inoremap jj <ESC>
 
 " Control Identation.
 
-set tabstop=4
-set shiftwidth=4
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+set tabstop=2
+set shiftwidth=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " Airline themes
 " let g:airline#extensions#tabline#enabled = 1
