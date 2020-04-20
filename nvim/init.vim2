@@ -1,0 +1,258 @@
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+
+call plug#begin('~/.config/nvim/plugged')
+
+" Make sure you use single quotes.
+
+" Fugitive.vim for Git Support.
+
+Plug 'tpope/vim-fugitive'
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align.
+
+Plug 'junegunn/vim-easy-align'
+
+" Any valid git URL is allowed.
+
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+" HTML5.
+
+Plug 'othree/html5.vim'
+
+" Emmet for completion.
+
+Plug 'mattn/emmet-vim'
+
+" Multiple Plug commands can be written in a single line using | separators.
+
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" On-demand loading.
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Yayy load stuff.
+
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Using a non-master branch.
+
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+" Using a tagged release; wildcard allowed (requires git 1.9.2 or above).
+
+Plug 'fatih/vim-go', { 'tag': '*' }
+
+" GoCode and Stuff.
+
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook.
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Automatically close the damn brackets, braces, etc.,
+
+Plug 'jiangmiao/auto-pairs'
+
+" I'd like to have emmet for my dev projects.
+
+Plug 'mattn/emmet-vim'
+
+" Vim Surround.
+
+Plug 'tpope/vim-surround'
+
+" Vim Repeat.
+
+Plug 'tpope/vim-repeat'
+
+" Make code pretty.
+
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+" Ctrl+p to locate files | :e <>.
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Try this ugly crap.
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+
+" Vim8-Solarized8 Nice.
+
+Plug 'lifepillar/vim-solarized8'
+
+" Command+t is a plugin that provides extremely fast "fuzzy" mechanism
+" for opening files/buffers, jumping to tags and help and
+" running commands or previous searches and commands by wincent.
+
+Plug 'wincent/command-t'
+
+" Enhanced terminal integration with Vim.
+
+Plug 'wincent/terminus'
+
+" Ferret for global searches.
+
+Plug 'wincent/ferret'
+
+" So loupe tames highlights and provides some pretty cool sensible defaults.
+
+Plug 'wincent/loupe'
+
+" Magit to simplify git commits.
+
+Plug 'jreybert/vimagit'
+
+" Vinegar is a better way to search dir(s).
+
+Plug 'tpope/vim-vinegar'
+
+" Neoclide Autocompletion: see https://github.com/neoclide/coc.nvim.
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Ack is for fast searching.
+
+Plug 'mileszs/ack.vim'
+
+" Close the damn brackets please.
+
+Plug 'jiangmiao/auto-pairs'
+
+" Polyglot - but with additions.
+
+Plug 'prurigro/vim-polyglot-darkcloud'
+
+" Strip trailing whitespace only on changed lines.
+
+Plug 'tweekmonster/wstrip.vim'
+
+" I'm going with Shug, I'm fisten ta sang. # Jai.
+
+Plug 'jansedivy/jai.vim'
+
+" Papercolor
+
+Plug 'NLKNguyen/papercolor-theme'
+
+" Goyo - Zen Writing.
+
+Plug 'junegunn/goyo.vim'
+
+" Vim-Markdown. Nuff said.
+
+Plug 'plasticboy/vim-markdown'
+
+" vim-vue
+
+Plug 'posva/vim-vue'
+
+" Dash Integration.
+Plug 'rizzatti/dash.vim'
+
+" Unmanaged plugin (manually installed and updated).
+" Plug '~/my-prototype-plugin'.
+
+" Initialize plugin system
+
+call plug#end()
+
+" Custom Settings
+
+" jj to Escape Insert mode.
+
+inoremap jj <ESC>
+
+" Control Identation.
+
+set tabstop=2
+set shiftwidth=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
+
+" Airline themes
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#themes#molokai#palette = {}
+
+" Color scheme settings.
+
+set background=dark
+"colorscheme solarized8_high
+"colorscheme koehler
+colorscheme PaperColor
+
+" Exeburant ctags - installed via apt
+set tags=tags;
+
+" -------------------------------------------------------------------------------------------------
+" coc.nvim default settings
+" -------------------------------------------------------------------------------------------------
+
+" if hidden is not set, TextEdit might fail.
+set hidden
+" Better display for messages
+set cmdheight=2
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use U to show documentation in preview window
+nnoremap <silent> U :call <SID>show_documentation()<CR>
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+set number relativenumber
