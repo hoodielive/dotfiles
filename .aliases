@@ -33,30 +33,35 @@ export PATH="/usr/local/opt/llvm@6/bin:$PATH"
 # For compilers to find llvm@6 you may need to set:
 export LDFLAGS="-L/usr/local/opt/llvm@6/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
-
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 #@Python3.8 baby!
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+#export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # aliases
 alias mv="mv -v"
 alias cp="cp -v"
-alias clones="cd ~/Clones"
-alias emacs="emacs -nw"
-alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias blackmagus="ssh blackmagus@10.0.1.25"
-alias hl="highlight"
-alias siz="source ~/.zshrc && echo Sourced Sir!"
 alias pg="pg_ctl"
-alias hyperconfig="nvim /mnt/c/Users/AsiriSogo/AppData/Roaming/Hyper/.hyper.js"
+alias emacs="emacs -nw"
+alias clones="cd ~/Clones"
+alias vlrst=clear
+alias hl="highlight"
 alias eve="eval $(ssh-agent -s)"
-alias gitssh="ssh-add ~/.ssh/git_rsa && ssh -T git@github.com"
+alias siz="source ~/.zshrc && echo Sourced Sir!"
+alias nvimconfig="nvim ~/.config/nvim/init.vim"
+alias gitssh="ssh-add ~/.ssh/git_ecdsa && ssh -T git@github.com"
+alias bitch="eve; gitssh"
 alias openaliases="nvim ~/.aliases"
 alias gotonvim="cd ~/.config/nvim"
-alias bitch="eve; gitssh"
-alias downloads="cd /mnt/c/Users/AsiriSogo/Downloads"
-alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+alias blackmagus="ssh blackmagus@blackmagus"
+#alias hyperconfig="nvim /mnt/c/Users/AsiriSogo/AppData/Roaming/Hyper/.hyper.js"
+
+# Downloads
+#alias downloads="cd /mnt/c/Users/AsiriSogo/Downloads"
+alias downloads="cd ~/Downloads"
+
+# ctags based on distribution
+# alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 
 # Clean-up Utilities
 alias squery="find . -type f -iname '*.srt'"
@@ -79,7 +84,6 @@ if [[ "$TERM" == "dumb" ]]; then
 fi
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
 export PATH="/home/awo/.local/bin:$PATH"
-alias vlrst=clear
 
-source ~/.antigen.zsh
-source ~/.antigenrc
+#source ~/.antigen.zsh
+#source ~/.antigenrc
