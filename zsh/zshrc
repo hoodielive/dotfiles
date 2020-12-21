@@ -9,8 +9,8 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="tonotdo"
 #ZSH_THEME="kphoen"
-ZSH_THEME="kennethreitz"
-#ZSH_THEME="mgutz"
+#ZSH_THEME="kennethreitz"
+ZSH_THEME="mgutz"
  
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/git_ecdsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -104,4 +104,4 @@ eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/.aliases
+source ~/.aliases.zsh
