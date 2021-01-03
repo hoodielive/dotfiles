@@ -1,10 +1,8 @@
 # Exports
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# homebrew sbin in PATH
+# put sbin in PATH
 export PATH="/usr/local/sbin:$PATH"
+export PATH=/home/arjuna/.local/bin:$PATH
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -15,11 +13,25 @@ export GOBIN=$HOME/.config/go/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$GOPATH
 
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
 
+# nim
+export PATH=/home/arjuna/.local/nim-1.4.2/bin:$PATH
+
+# emacs
 # emacs that bitch mac is making your life hell
 # export PATH="$PATH:/usr/local/bin/emacs"
 # export EDITOR='emacsclient -a ~/.shut-up-emacs-client.sh'
 export EDITOR="nvim"
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
+# Remove all these eff'n Windows bin(s) from $PATH:
+
+export PATH=$(echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':')
+
 
 # To use the bundled libc++ please add the following LDFLAGS:
 # LDFLAGS="-L/usr/local/opt/llvm@6/lib -Wl,-rpath,/usr/local/opt/llvm@6/lib"
@@ -28,40 +40,64 @@ export EDITOR="nvim"
 # because this is an alternate version of another formula.
 
 # If you need to have llvm@6 first in your PATH run:
-export PATH="/usr/local/opt/llvm@6/bin:$PATH"
+export PATH="/usr/local/opt/llvm@6/bin:/opt/puppetlabs/bin:$PATH"
 
 # For compilers to find llvm@6 you may need to set:
 export LDFLAGS="-L/usr/local/opt/llvm@6/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-#@Python3.8 baby!
-#export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+# PDK is being a dick. So lets add the little fucker to $PATH
 
-# aliases
+export PATH=/usr/local/bin:$PATH
+
+# Puppet aliases.
+alias proot="cd /etc/puppetlabs/puppet"
+alias prod="/etc/puppetlabs/code/environments/production"
+alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
+
+# Apt aliases.
+alias install="sudo apt install $1"
+
+# Manage Neovim.
+alias nv="nvim ~/.config/nvim/init.vim"
+alias nv2="nvim ~/.config/nvim/init.vimrc"
+alias nvu="nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins"
+alias nvi="nvim +PlugInstall"
+alias nvc="nvim ~/.config/nvim/custom_settings.vimrc"
+alias gnv="cd ~/.config/nvim"
+
+# DB aliases.
+alias pg="pg_ctl"
+
+# Utility aliases.
 alias mv="mv -v"
 alias cp="cp -v"
-alias pg="pg_ctl"
+alias nvi="nvim"
 alias emacs="emacs -nw"
 alias clones="cd ~/Clones"
+alias themer="ls ~/.oh-my-zsh/themes"
 alias vlrst=clear
 alias hl="highlight"
 alias eve="eval $(ssh-agent -s)"
-alias siz="source ~/.zshrc && echo Sourced Sir!"
-alias nvimconfig="nvim ~/.config/nvim/init.vim"
+alias siz="source ~/.zshrc && echo Sourced Master!"
 alias gitssh="ssh-add ~/.ssh/git_ecdsa && ssh -T git@github.com"
 alias bitch="eve; gitssh"
-alias openaliases="nvim ~/.aliases"
-alias gotonvim="cd ~/.config/nvim"
+alias oa="nvim ~/.aliases.zsh"
 alias blackmagus="ssh blackmagus@blackmagus"
-#alias hyperconfig="nvim /mnt/c/Users/AsiriSogo/AppData/Roaming/Hyper/.hyper.js"
+alias hyperconfig="nvim /mnt/c/Users/Abifoluwa/AppData/Roaming/Hyper/.hyper.js"
+alias code="/mnt/c/Users/abifoluwa/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
+alias love="/mnt/c/Program\ Files/LOVE/love.exe"
 
 # Downloads
-#alias downloads="cd /mnt/c/Users/AsiriSogo/Downloads"
+alias downloads="cd /mnt/c/Users/Abifoluwa/Downloads"
 alias downloads="cd ~/Downloads"
 
 # ctags based on distribution
 # alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+
+# Fuck off Microsoft.
+DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Clean-up Utilities
 alias squery="find . -type f -iname '*.srt'"
@@ -82,8 +118,7 @@ if [[ "$TERM" == "dumb" ]]; then
 	PS1='$ '
 	return
 fi
+
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
 export PATH="/home/awo/.local/bin:$PATH"
-
-#source ~/.antigen.zsh
-#source ~/.antigenrc
+export PATH="/home/arjuna/.config/composer/vendor/bin:$PATH"
