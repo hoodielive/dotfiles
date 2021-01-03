@@ -16,4 +16,5 @@ TodoList
 13. Git projects on windows - tightly integrated between wsl - read wsl book.
 14. Integrate Unity with Omnisharp for Unity Projects.
 15. How do you autocomplete with coc.nvim?
-
+16. IRC client setup.
+17. Get Ranger previews working with ueberzug.
