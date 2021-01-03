@@ -15,3 +15,5 @@ TodoList
 		-> [ Please fix font issues ] [ Are you telling me that I have to install tmux for split screens? ]
 13. Git projects on windows - tightly integrated between wsl - read wsl book.
 14. Integrate Unity with Omnisharp for Unity Projects.
+15. How do you autocomplete with coc.nvim?
+
