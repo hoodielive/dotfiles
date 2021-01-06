@@ -29,9 +29,7 @@ export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # Remove all these eff'n Windows bin(s) from $PATH:
-
 export PATH=$(echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':')
-
 
 # To use the bundled libc++ please add the following LDFLAGS:
 # LDFLAGS="-L/usr/local/opt/llvm@6/lib -Wl,-rpath,/usr/local/opt/llvm@6/lib"
@@ -48,7 +46,6 @@ export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # PDK is being a dick. So lets add the little fucker to $PATH
-
 export PATH=/usr/local/bin:$PATH
 
 # Configuration Management.
