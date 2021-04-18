@@ -9,7 +9,6 @@ autocmd VimEnter *
 
 source $HOME/.config/nvim/coc.vim
 source $HOME/.config/nvim/plugins.vim
-"source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/rnvimr.vim
-source $HOME/.config/nvim/mappings.vim

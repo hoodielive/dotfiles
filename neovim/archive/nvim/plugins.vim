@@ -33,7 +33,7 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'junegunn/vim-easy-align'
 
 " Debugger. Should be dope.
-"Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 
 " Any valid git URL is allowed.
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -111,11 +111,8 @@ Plug 'mileszs/ack.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'OmniSharp/omnisharp-roslyn' " Do I need this?
 
-" LanguageClient-Neovim (get rid of gutter)
-Plug 'autozimu/LanguageClient-neovim'
-
 " Ale linter to get on that ass when you're wrong.
-" Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
