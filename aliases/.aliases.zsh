@@ -16,7 +16,7 @@ export PATH=$PATH:$GOPATH
 # node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
 
 # nim
 export PATH=/home/arjuna/.local/nim-1.4.2/bin:$PATH
@@ -29,9 +29,7 @@ export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # Remove all these eff'n Windows bin(s) from $PATH:
-
 export PATH=$(echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':')
-
 
 # To use the bundled libc++ please add the following LDFLAGS:
 # LDFLAGS="-L/usr/local/opt/llvm@6/lib -Wl,-rpath,/usr/local/opt/llvm@6/lib"
@@ -48,7 +46,6 @@ export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # PDK is being a dick. So lets add the little fucker to $PATH
-
 export PATH=/usr/local/bin:$PATH
 
 # Configuration Management.
@@ -63,11 +60,14 @@ alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
 alias install="sudo apt install $1"
 
 # Manage Neovim.
+export PATH=/home/arjuna/.nvim-linux64/bin:$PATH
 alias nv="nvim ~/.config/nvim/init.vim"
-alias nv2="nvim ~/.config/nvim/init.vimrc"
+alias nv2="nvim ~/.config/nvim/settings.vim"
+alias nvp="nvim ~/.config/nvim/plugins.vim"
+alias mappings="nvim ~/.config/nvim/mappings.vim"
 alias nvu="nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins"
 alias nvi="nvim +PlugInstall"
-alias nvc="nvim ~/.config/nvim/custom_settings.vimrc"
+alias nvc="nvim ~/.config/nvim/coc.vim"
 alias gnv="cd ~/.config/nvim"
 
 # DB aliases.
@@ -80,6 +80,8 @@ alias nvi="nvim"
 alias emacs="emacs -nw"
 alias clones="cd ~/Clones"
 alias themer="ls ~/.oh-my-zsh/themes"
+alias dope="cd ~/Clones/dope"
+alias dopel="ll ~/Clones/dope"
 alias vlrst=clear
 alias hl="highlight"
 alias eve="eval $(ssh-agent -s)"
