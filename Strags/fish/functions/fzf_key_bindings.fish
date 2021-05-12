@@ -1,0 +1,1 @@
+/home/abifoluwa/.fzf/shell/key-bindings.fish
