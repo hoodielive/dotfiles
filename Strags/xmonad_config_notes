@@ -1,0 +1,12 @@
+Xmonad configuration files and options:
+
+Xmonad config file has to be downloaded from haskell.archive, there you'll find xmonad.hs - place in .xmonad/xmonad.hs
+
+Nitrogen/Compton - Wallpaper management. System wallpapers are found at '/usr/share/backgrounds'
+
+Xmobar - the little bar up top. Had to go to github to obtain docs. 
+
+XMonad.Hooks.ManageDocks = so the terminal doesn't hide xmobar
+
+# Polybar 
+

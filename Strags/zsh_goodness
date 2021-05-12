@@ -1,0 +1,71 @@
+
+Order of Precedence: 
+1. Aliases
+2. Reserved Words
+3. Functions
+4. Builtins
+5. Commands
+
+Check env:
+env 
+
+Setopts or Unset Setopts:
+setopts verbose 
+setopts noverbose
+
+aliases takes precedence before keywords like:
+- if
+- else
+- [[]]
+- (())
+
+Create custom functions by:
+ml() {
+	ls -lah $1
+}
+
+Find out about functions by typing:
+functions or echo $fpath
+
+/usr/share/zsh/functions/Misc
+ex: tetriscurses is not loaded by default but can be autoloaded with the following command:
+autoload -U tetriscurses where -U means suppress aliases, meaning if one is already defined with the same number, prefer the function.
+
+Find out which builtins are disabled or enabled by:
+disable (shows disabled builtins)
+enable (shows which builtins are enabled)
+man zshbuiltins
+
+
+Directory Stack/dirs:
+dirs 
+pushd /etc
+pushd /var
+pushd
+dirs -v
+pushd +2 (jump to item 2 in the stack)
+popd (remove from stack)
+hash -d md=~/Documents/somedir
+ls ~md
+touch ~md/newfile
+hash (shows all hashes)
+rehash
+
+Whence: 
+Shows how a command is being interpreted.
+whence -v cd
+whenve -w  (shows what kind of word is it)
+whence -f (show the function)
+whence -m "l*" (show me every command that starts with an l) and -wm
+
+CompleteinWord:
+cd /var/l/s
+
+# Speed up work with r
+stat /var
+r var=bin
+
+# zmv move files in a more programmable way.
+autoload -U zmv
+
+
