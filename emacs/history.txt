@@ -1,0 +1,3631 @@
+    1  sudo -s
+    2  clear
+    3  cd
+    4  clear 
+    5  git
+    6  clear
+    7  cd Clones
+    8  ll
+    9  ssh-keygen -t ecdsa -b 521 -C "hoodielive@gmail.com" -f ~/.ssh/git_ecdsa
+   10  cat ~/.ssh/git_ecdsa.pub
+   11  clear 
+   12  git config --global user.name "hoodielive"
+   13  git config --global user.email "hoodielive@gmail.com"
+   14  git config --global color.ui true
+   15  clear 
+   16  eval $(ssh-agent -s)
+   17  ssh-add ~/.ssh/git_ecdsa
+   18  clear 
+   19  ssh -T git@github.com
+   20  git clone git@github.com:hoodielive/dotfiles
+   21  cd dotfiles
+   22  ls
+   23  clear
+   24  ll
+   25  cd aliases
+   26  ll
+   27  mv .aliases .aliases.zsh
+   28  cp .aliases.zsh ~/
+   29  cd zsh
+   30  ls
+   31  cd ../zsh
+   32  ls
+   33  clear
+   34  ll
+   35  nvim .zshrc
+   36  nvim zshrc
+   37  clear
+   38  nvim ~/.zshrc
+   39  clear 
+   40  source ~/.zshrc
+   41  ll
+   42  cd
+   43  clear 
+   44  cd .config
+   45  mkdir nvim
+   46  cd nvim
+   47  ll
+   48  cp ~/Clones/dotfiles/neovim/init.vim .
+   49  ll
+   50  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\n       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+   51  clear 
+   52  pip3 install neovim
+   53  ls 
+   54  nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins
+   55  sudo pacman -Syyu golang
+   56  sudo pacman -Syyu go
+   57  clear 
+   58  ls 
+   59  cd
+   60  clear 
+   61  cd -
+   62  ll
+   63  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+   64  siz
+   65  nvm install 15
+   66  nvm use 15
+   67  clear 
+   68  ll
+   69  clear 
+   70  ls -tlr 
+   71  w
+   72  clear 
+   73  sudo pacman -S --needed base-devel libffi libyaml openssl zlib
+   74  ruby --version
+   75  clear 
+   76  pacman --help 
+   77  pacman -Q --help
+   78  pacman -Qk ruby
+   79  pacman -Q ruby
+   80  pacman -Qs ruby
+   81  pacman -s ruby
+   82  pacman -Qs ruby
+   83  whoami
+   84  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+   85  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+   86  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+   87  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+   88  echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+   89  source ~/.zshrc
+   90  type rbenv
+   91  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   92  rbenv -l
+   93  rbenv install -l
+   94  rbenv install --list-all
+   95  rbenv install 3.0.0
+   96  rbenv install 3.0.0-dev
+   97  sudo mkdir /usr/local/opt
+   98  sudo chmod 0775 /usr/local/opt
+   99  rbenv install 3.0.0-dev
+  100  sudo chmod 0777 /usr/local/opt
+  101  rbenv install 3.0.0-dev
+  102  sudo rbenv install 3.0.0-dev
+  103  sudo rbenv install 2.7.1
+  104  rbenv install 2.7.1
+  105  rbenv global 2.7.1
+  106  ruby --version
+  107  echo "gem: --no-document" > ~/.gemrc
+  108  gem install bundler 
+  109  gem install pry
+  110  gem install rails
+  111  gem home env
+  112  gem env 
+  113  gem env home
+  114  clear 
+  115  rbenv rehash
+  116  clear 
+  117  cd
+  118  cd Documents
+  119  ll
+  120  nvim xmonad_config_notes
+  121  clear 
+  122  cd
+  123  cd .xmonad
+  124  nvim xmonad.h
+  125  clear 
+  126  cd ../.config
+  127  cd xmobar
+  128  ll
+  129  nvim xmobar.config
+  130  git clone https://github.com/adobe-fonts/source-code-pro
+  131  ls 
+  132  clear 
+  133  cd source-code-pro
+  134  ll
+  135  cd TTF
+  136  ll
+  137  sudo mkdir /usr/share/fonts/TTF/SourceCodePro
+  138  sudo mv * /usr/share/fonts/TTF/SourceCodePro/
+  139  fc-cache -fv
+  140  clear 
+  141  cd ..
+  142  ll
+  143  cd ..
+  144  ll
+  145  rm -rf source-code-pro
+  146  ll
+  147  clear
+  148  nvim xmobar.config
+  149  reboot
+  150  xmobar
+  151  clear
+  152  cd .config/xmobar
+  153  ll
+  154  nvim xmobar.config
+  155  xmobar &
+  156  clear 
+  157  exit
+  158  cd .config/xmobar
+  159  ll
+  160  nvim xmobar.config
+  161  ls 
+  162  clear 
+  163  clear
+  164  ll
+  165  nvim xmobar.config
+  166  nvim xmobar.config 
+  167  ls -tlr 
+  168  w
+  169  clear 
+  170  clones
+  171  git clone git@github.com:hoodielive/haskell
+  172  bitch
+  173  git clone git@github.com:hoodielive/haskell
+  174  clear 
+  175  ll
+  176  git clone git@github.com:hoodielive/modernpy
+  177  git clone git@github.com:hoodielive/modernjs
+  178  git clone git@github.com:hoodielive/csharp
+  179  git clone git@github.com:hoodielive/cplusplus
+  180  clear 
+  181  ext
+  182  exit
+  183  git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+  184  cd
+  185  cd .emacs.d
+  186  ls
+  187  bin/doom install
+  188  dmesg | grep -i Bluetooth | tail
+  189  sudo dmesg | grep -i Bluetooth | tail
+  190  clear 
+  191  cd
+  192  clear
+  193  emacs
+  194  elm
+  195  clear
+  196  cd .oh-my-zsh
+  197  ll
+  198  cd themese
+  199  cd themes
+  200  ls
+  201  clear 
+  202  ls
+  203  zshconfig
+  204  siz
+  205  clear 
+  206  ll
+  207  cd
+  208  clear
+  209  ll
+  210  neofetch
+  211  fetch
+  212  sudo pacman -Syyu neofetch
+  213  neofetch
+  214  cd .xmonad
+  215  ll
+  216  nvim xmonad.hs
+  217  neofetch
+  218  clear 
+  219  cd
+  220  ll
+  221  clear 
+  222  cd Documents
+  223  ll
+  224  nvim xmonad_config_notes
+  225  clones
+  226  cd dotfiles
+  227  ll
+  228  clear 
+  229  ll
+  230  nvim aliases
+  231  cd neovim
+  232  ll
+  233  clear
+  234  nvim init.vim
+  235  git status
+  236  git add -A
+  237  git commit -m "made a few changes.. need to reeval and reOrg" 
+  238  git push 
+  239  bitch 
+  240  git push 
+  241  clear 
+  242  ls
+  243  v
+  244  cd
+  245  clear 
+  246  ll
+  247  cd .xmonad
+  248  ll
+  249  nvim xmonad.hs
+  250  sudo pacman -Syyu termite
+  251  xmonad -recompile
+  252  ls 
+  253  clear 
+  254  exit
+  255  clear
+  256  ll
+  257  clear 
+  258  sudo pacman -Syyu ranger
+  259  sudo pacman -Syyu atool highlight mediainfo perl-image-exiftool python-bidi python-ueberzug transmission-cli w3m 
+  260  sudo pacman -Syyu atool highlight mediainfo perl-image-exiftool python-ueberzug transmission-cli w3m
+  261  sudo pacman -Syyu python-bidi
+  262  clear 
+  263  clones
+  264  ll
+  265  cd dope
+  266  ls
+  267  clear 
+  268  ll
+  269  mkdir haskellharass
+  270  mv Main* haskellharass
+  271  ll
+  272  clear 
+  273  :w
+  274  clear 
+  275  exit 
+  276  clones
+  277  cd dope
+  278  ll
+  279  clear
+  280  git clone https://gitlab.com/dwt1/dotfiles.git
+  281  pip3 install ptpython ipython ptipython
+  282  clear
+  283  sudo pacman -Syyu bpython
+  284  clear 
+  285  bpython3
+  286  sudo pacman -Syyu bpython3
+  287  clear 
+  288  bpython
+  289  picom
+  290  clear 
+  291  sudo pacman -Syyu ufetch
+  292  git clone https://github.com/dnordstorm/dotfiles
+  293  ll
+  294  cd dotfiles
+  295  ll
+  296  git log
+  297  cd ..
+  298  ll
+  299  mv dotfiles dt-dotfiles
+  300  ll
+  301  clear 
+  302  git clone https://github.com/dnordstorm/dotfiles dnordstorm-dotfiles
+  303  ll
+  304  git clone git://github.com/dnordstorm/dotfiles dnordstorm-dotfiles
+  305  cd ..
+  306  ll
+  307  clear 
+  308  git clone git@github.com:hoodielive/nim
+  309  git clone git@github.com:hoodielive/modernc
+  310  git clone git@github.com:hoodielive/pygames
+  311  clear 
+  312  sudo pacman -Syyu love2d
+  313  pacman -Qs love2d
+  314  pacman -Qs love
+  315  pacman -Qs
+  316  git clone git@github.com:hoodielive/moderncsharp
+  317  git clone git@github.com:hoodielive/ansible_studies
+  318  clear 
+  319  git clone git@github.com:hoodielive/terraform
+  320  git clone git@github.com:hoodielive/ansible_pulp
+  321  git clone git@github.com:hoodielive/jamstack
+  322  git clone git@github.com:hoodielive/puppetmastery
+  323  git clone git@github.com:hoodielive/deepops
+  324  git clone git@github.com:hoodielive/openssl
+  325  git clone git@github.com:hoodielive/lisp
+  326  git clone git@github.com:hoodielive/rust
+  327  git clone git@github.com:hoodielive/opele
+  328  git clone git@github.com:hoodielive/css
+  329  git clone git@github.com:hoodielive/design_patterns_csharp
+  330  git clone git@github.com:hoodielive/zig
+  331  git clone git@github.com:hoodielive/gamedev
+  332  git clone git@github.com:hoodielive/moderncpp
+  333  git clone git@github.com:hoodielive/gamedev
+  334  git clone git@github.com:hoodielive/racket
+  335  git clone git@github.com:hoodielive/solidity
+  336  git clone git@github.com:hoodielive/blockingthechains
+  337  git clone git@github.com:hoodielive/typescript
+  338  git clone git@github.com:hoodielive/smpfp
+  339  git clone git@github.com:hoodielive/shellscripting
+  340  git clone git@github.com:hoodielive/smpfp
+  341  git clone git@github.com:hoodielive/oldcpp
+  342  git clone git@github.com:hoodielive/elixir
+  343  git clone git@github.com:hoodielive/fluid-python
+  344  git clone git@github.com:hoodielive/linuxc
+  345  git clone git@github.com:hoodielive/elisp
+  346  git clone git@github.com:hoodielive/pythonista-dev
+  347  git clone git@github.com:hoodielive/rhce-ex294
+  348  git clone git@github.com:hoodielive/learngolang
+  349  git clone git@github.com:hoodielive/pythonnerd
+  350  git clone git@github.com:hoodielive/java
+  351  git clone git@github.com:hoodielive/tensor-flow-machine-learning-js
+  352  git clone git@github.com:hoodielive/js2020
+  353  git clone git@github.com:hoodielive/compiler-interpreter
+  354  git clone git@github.com:hoodielive/letsgo
+  355  git clone git@github.com:hoodielive/python-devops
+  356  git clone git@github.com:hoodielive/unity
+  357  git clone git@github.com:hoodielive/machine_learning_javascript
+  358  git clone git@github.com:hoodielive/perusalsinc
+  359  git clone git@github.com:hoodielive/emacsLisp
+  360  git clone git@github.com:hoodielive/LinuxFromScratch
+  361  git clone git@github.com:hoodielive/GameEngine
+  362  git clone git@github.com:hoodielive/python_automated_testing
+  363  git clone git@github.com:hoodielive/functional
+  364  git clone git@github.com:hoodielive/computerscience
+  365  git clone git@github.com:hoodielive/datasec
+  366  git clone git@github.com:hoodielive/datascience
+  367  git clone git@github.com:hoodielive/python3
+  368  git clone git@github.com:hoodielive/sql
+  369  git clone git@github.com:hoodielive/js-design-patterns
+  370  git clone git@github.com:hoodielive/pythonic-math
+  371  git clone git@github.com:hoodielive/flask
+  372  git clone git@github.com:hoodielive/computation-python
+  373  git clone git@github.com:hoodielive/mailman
+  374  git clone git@github.com:hoodielive/blockchain
+  375  git clone git@github.com:hoodielive/algors
+  376  git clone git@github.com:hoodielive/vimscript
+  377  git clone git@github.com:hoodielive/pythonscripts
+  378  git clone git@github.com:hoodielive/git-bats-demo
+  379  git clone git@github.com:hoodielive/bats-core
+  380  git clone git@github.com:hoodielive/elm
+  381  git clone git@github.com:hoodielive/functional_javascript
+  382  git clone git@github.com:hoodielive/sicp
+  383  git clone git@github.com:hoodielive/Algorithms
+  384  git clone git@github.com:hoodielive/hackintosh
+  385  git clone git@github.com:hoodielive/ideas
+  386  cd ideas
+  387  ls
+  388  clear 
+  389  nvim studio.c
+  390  clear 
+  391  cd ..
+  392  git clone git@github.com:hoodielive/iac
+  393  cd iac
+  394  ls
+  395  clear 
+  396  nvim README.md
+  397  cd ..
+  398  git clone git@github.com:hoodielive/modernrb
+  399  openaliases
+  400  nvim ~/.aliases.zsh
+  401  siz
+  402  clear
+  403  sudo nvim /usr/bin/lazygit
+  404  chmod +x 0755 /usr/bin/lazygit
+  405  sudo chmod +x 0755 /usr/bin/lazygit
+  406  sudo chmod 0755 /usr/bin/lazygit
+  407  ll
+  408  clear
+  409  git status
+  410  clear 
+  411  gc
+  412  alias | grep gc$
+  413  alias | grep -E gc$
+  414  alias | grep -E 'gc$'
+  415  gc
+  416  openaliases
+  417  siz
+  418  gclone
+  419  cd dope
+  420  ls
+  421  clear
+  422  gclone mikecann Unity-Helpers
+  423  gclone mikecann/Unity-Helpers
+  424  gclone mikecann Unity-Helpers
+  425  git clone https://github.com/mikecann/Unity-Helpers
+  426  cd Unity-Helpers
+  427  ll
+  428  clear 
+  429  ll
+  430  cd Scripts
+  431  ll
+  432  clear
+  433  ll
+  434  nvim UnityUtils.cs
+  435  nvimconfig
+  436  nvim UnityUtils.cs
+  437  clear 
+  438  cd
+  439  cd .xmonad
+  440  l
+  441  ll
+  442  nvim xmonad.hs
+  443  clear 
+  444  cd .oh-my-zsh
+  445  ll
+  446  cd themes
+  447  ll
+  448  nvim ~/.zshrc
+  449  siz
+  450  clear
+  451  ll
+  452  clear 
+  453  ls 
+  454  clear 
+  455  sudo pacman -Syyu alcritty
+  456  ls
+  457  ll
+  458  ls
+  459  openaliases
+  460  siz
+  461  clear
+  462  xmonadconfig
+  463  clear 
+  464  ll
+  465  cd Clones
+  466  ll
+  467  cd dope
+  468  ll
+  469  git clone https://github.com/alacritty/alacritty
+  470  cd ..
+  471  ll
+  472  cd haskell
+  473  ll
+  474  clear
+  475  ll
+  476  ls 
+  477  clear 
+  478  cd ../dope/alacritty
+  479  ll
+  480  sudo  pacman -Syyu hyper
+  481  clear 
+  482  xmonadconfig
+  483  clear 
+  484  ls 
+  485  ll
+  486  exit
+  487  echo $TERM
+  488  clear 
+  489  ls 
+  490  clear 
+  491  exit
+  492  exit 
+  493  nvimconfig
+  494  xmonadconfig
+  495  exit
+  496  ls
+  497  exit
+  498  ls -ltr 
+  499  exit 
+  500  git clone https://github.com/larsenwork/monoid.git ~/Clones/dope/monoid
+  501  cd ~/Clones/dope/monoid
+  502  ls
+  503  ll
+  504  cd Monoisome
+  505  ll
+  506  cd Monoisome.sfdir
+  507  ll
+  508  cd ..
+  509  ll
+  510  cd ..
+  511  ll
+  512  cd Utilities
+  513  ll
+  514  cd ..
+  515  ll
+  516  cd Source
+  517  ll
+  518  cd ..
+  519  ll
+  520  find . -iname "*.ttf"
+  521  cd Monoisome
+  522  ll
+  523  cd ..
+  524  ll
+  525  sudo scp -rp Monoisome /usr/share/fonts/TTF
+  526  ll
+  527  clear 
+  528  fc-cache -fv
+  529  ls
+  530  clear 
+  531  ls
+  532  ll
+  533  cd
+  534  clones
+  535  ll
+  536  clear
+  537  ll
+  538  ls 
+  539  emacs
+  540  clear 
+  541  xmonadconfig
+  542  exit
+  543  xmonadconfig
+  544  exit
+  545  xmonadconfig
+  546  htop
+  547  exit 
+  548  exit
+  549  htop
+  550  clear 
+  551  clones
+  552  ll
+  553  ls
+  554  cd opele
+  555  ll
+  556  clear
+  557  nvim odu_encryption.py
+  558  clones
+  559  ll
+  560  cd modernpy
+  561  ll
+  562  cd vs 
+  563  ll
+  564  nvim syntaxerro.py
+  565  xmonadconfig
+  566  clear
+  567  ll
+  568  cd modernpy
+  569  l
+  570  ls
+  571  clear 
+  572  ll
+  573  cd vs
+  574  ll
+  575  clear 
+  576  ll
+  577  nvim strings_texts.py
+  578  python3 strings_texts.py
+  579  clear 
+  580  nvim strings_texts.py 
+  581  python3 strings_texts.py
+  582  clear
+  583  ls 
+  584  git status 
+  585  git add -A 
+  586  git status
+  587  git commit -m "Just... " 
+  588  git push 
+  589  bitch
+  590  git push 
+  591  nvim strings_texts.py  
+  592  python3 vs.py
+  593  python3 strings_texts.py
+  594  nvim strings_texts.py   
+  595  python3 strings_texts.py
+  596  nim
+  597  clear 
+  598  sudo pacman -Syyu
+  599  clear 
+  600  sudo pacman -Syyu nimdow-bin
+  601  sudo pacman -Q -s nimdow
+  602  sudo pacman -Ss nimdow
+  603  sudo pacman -Ss nim
+  604  sudo pacman -Syyu nim nimble 
+  605  nim
+  606  nimble
+  607  nimble search nimdow
+  608  nimble refresh
+  609  nimble search nimdow
+  610  nimble --help
+  611  nimble list nimdow
+  612  exit
+  613  clear 
+  614  ll 
+  615  cd
+  616  cd - 
+  617  git status
+  618  lazygit "strings and texts and thangs"
+  619  nv
+  620  openaliases
+  621  ll
+  622  clear
+  623  zis
+  624  siz
+  625  clear
+  626  openaliases
+  627  siz
+  628  clear 
+  629  nv
+  630  sudo pacman -Syyu ctags
+  631  nvim strings_texts.py    
+  632  nv
+  633  nvu
+  634  clear
+  635  nvim strings_texts.py    
+  636  nv
+  637  nvu
+  638  nv
+  639  clear
+  640  oa
+  641  siz
+  642  clear
+  643  nvuc
+  644  clear 
+  645  zshconfig
+  646  clear 
+  647  nvim chipper.py DiceRoll.py
+  648  lazygit "Um.. cough." 
+  649  nvim chipper.py DiceRoll.py 
+  650  lazygit "Don't doubt the immutability of tuples." 
+  651  python3 strings_texts.py
+  652  python3 DiceRoll.py
+  653  ls
+  654  python3 chipper.py
+  655  clear 
+  656  ll
+  657  clear 
+  658  clones 
+  659  cd modernpy
+  660  ll
+  661  cd brandon_app
+  662  l
+  663  clear 
+  664  ll
+  665  nvim according_to_brandon.py
+  666  python3 according_to_brandon.py
+  667  nvim according_to_brandon.py 
+  668  python3 according_to_brandon.py
+  669  nvim according_to_brandon.py  
+  670  python3 according_to_brandon.py
+  671  nvim according_to_brandon.py   
+  672  clear
+  673  python3 according_to_brandon.py
+  674  nvim according_to_brandon.py   
+  675  python3 according_to_brandon.py
+  676  nvim according_to_brandon.py   
+  677  python3 according_to_brandon.py
+  678  nvim according_to_brandon.py    
+  679  python3 according_to_brandon.py
+  680  nvim according_to_brandon.py     
+  681  python3 according_to_brandon.py
+  682  nvim according_to_brandon.py      
+  683  python3 according_to_brandon.py
+  684  nvim according_to_brandon.py      
+  685  clear 
+  686  ll
+  687  cd ..
+  688  ll
+  689  clear 
+  690  ll
+  691  cd expert
+  692  ll
+  693  clear 
+  694  ll
+  695  nvim zip_enumerate.py
+  696  nvim setitoff.py
+  697  nvim functional.py
+  698  python3 functional.py
+  699  python -e "help(collections)"
+  700  python -c "help(collections)"
+  701  python -c "help(collection)"
+  702  bpython3 
+  703  bpython
+  704  clear 
+  705  pacman -S -s polybar
+  706  xmonadconfig
+  707  xmc
+  708  oa
+  709  siz
+  710  clear 
+  711  xmc
+  712  sudo pacman -Syyu MPlayer
+  713  sudo pacman -Syyu mplayer
+  714  clear 
+  715  ls 
+  716  ll
+  717  ps -ef | grep mplayer
+  718  clear 
+  719  xmc
+  720  pacman -Syyu qtile
+  721  sudo pacman -Syyu qtile
+  722  clear 
+  723  xmc
+  724  oa
+  725  siz
+  726  xmoc
+  727  xmobar -B white -a right -F blue -t '%LIPB%' -c '[Run Weather "LIPB" [] 36000]' &
+  728  cd .confgi
+  729  cd .conf
+  730  cd .config
+  731  ~/.config/xmobar
+  732  ls
+  733  clear
+  734  ll
+  735  cp xmobar.config{,.bak}
+  736  echo > xmobar.config
+  737  ll
+  738  xmoc
+  739  nvim xmobar.config.bak
+  740  reboot
+  741  xmo
+  742  xmc
+  743  echo $SHELL
+  744  echo $TERM
+  745  clear 
+  746  mpv
+  747  sudo pacman -Syyu mpv
+  748  clear 
+  749  mpv 
+  750  clear 
+  751  xmc
+  752  reboot
+  753  oa
+  754  reboot
+  755  ao
+  756  oa
+  757  reboot
+  758  oa
+  759  xmoc
+  760  xmc
+  761  clear
+  762  reboot
+  763  xmc
+  764  reboot
+  765  oa
+  766  siz
+  767  clear 
+  768  xmc
+  769  clear 
+  770  picom &
+  771  clear 
+  772  sudo pacman -Syyu picom
+  773  clear 
+  774  reboot
+  775  xmc
+  776  ao
+  777  oa
+  778  reboot
+  779  xmc
+  780  reboot
+  781  picom
+  782  picom &
+  783  clear 
+  784  clones
+  785  ll
+  786  cd nim
+  787  ls
+  788  clear 
+  789  picom &
+  790  exit
+  791  picom &
+  792  exit
+  793  picom &
+  794  cd .config
+  795  ll
+  796  clear 
+  797  ls
+  798  mkdir st
+  799  cd st
+  800  ll
+  801  nvim config.h
+  802  clear 
+  803  sudo updatedb -v
+  804  clear 
+  805  find / -type f -iname "config.h"
+  806  find / -type f -iname "config.h" | grep -v -i Permission
+  807  find / -type f -iname "config.h" > /dev/null
+  808  find / -type f -iname "config.h" 2> /dev/null
+  809  /usr/share/doc/st-manjaro
+  810  ls
+  811  clear 
+  812  cat README
+  813  man st
+  814  find / -type f -iname "st-manjaro" 2> /dev/null
+  815  echo $?
+  816  tic -sx st.info
+  817  tic 
+  818  man tic
+  819  clear 
+  820  cat README
+  821  find /usr/local -type f -iname "*st*"
+  822  find /usr/local -type f -iname "*st-manjaro*"
+  823  sudo pacman -Syyu hyper
+  824  sudo pacman -Syyu hyper.js
+  825  sudo pacman -Syyu hyperjs
+  826  pacman -Ss hyper 
+  827  sudo pacman -Syyu httpie jq 
+  828  jq
+  829  clear 
+  830  sudo pacman -Syyu tldr
+  831  tldr jq
+  832  jobs
+  833  fg
+  834  clear 
+  835  tldr jq
+  836  clear 
+  837  cd
+  838  clear 
+  839  cd .config/st
+  840  nvim config.h
+  841  clear 
+  842  exit 
+  843  source ~/.config/st/config.h
+  844  clear 
+  845  st options zsh
+  846  st options fish
+  847  sudo pacman -Syyu fish
+  848  clear
+  849  st options fish
+  850  st options zsh
+  851  st 
+  852  st options
+  853  st --help
+  854  man st
+  855  st -f "Source Code Pro:size=12"
+  856  exit 
+  857  exit
+  858  picom &
+  859  la 
+  860  clear 
+  861  xmoc
+  862  xmc
+  863  cd .config/st
+  864  ll
+  865  nvim config.h
+  866  nvim config.h.ctjhoa
+  867  clear 
+  868  reboot
+  869  ls 
+  870  clear 
+  871  sudo pacman -Syyu yay
+  872  yay
+  873  sudo yay
+  874  yay neovim
+  875  clear 
+  876  gem install ruby
+  877  gem install neovim
+  878  yay install polybar
+  879  sudo pacman -Syyu polybar
+  880  install -Dm644 /usr/share/doc/polybar/config $HOME/.config/polybar/config
+  881  polybar example
+  882  clear 
+  883  cd Documents
+  884  ll
+  885  nvim xmonad_config_notes
+  886  polybar
+  887  sudo pacman -Syyu ff2mpv
+  888  ls 
+  889  clear 
+  890  nvim xmonad_config_notes
+  891  sudo pacman -Syyu vivaldi
+  892  pacman -Syyu
+  893  sudo pacman -Syyu
+  894  sudo pacman -Syyu catfish
+  895  emacs
+  896  exit
+  897  sudo pacman -Syyu hfsprogs
+  898  ls 
+  899  sudo -s
+  900  sudo pacman -Syy
+  901  exit
+  902  clear 
+  903  ls 
+  904  cd /mnt
+  905  ls
+  906  cd Preemies
+  907  ll
+  908  ranger
+  909  clear
+  910  cd
+  911  clear 
+  912  umount /mnt
+  913  sudo umount /mnt
+  914  nvc
+  915  siz
+  916  nvc
+  917  nv
+  918  ls 
+  919  pimon
+  920  ls 
+  921  clear 
+  922  ll 
+  923  fzf
+  924  clear 
+  925  ls 
+  926  pimon
+  927  comptom
+  928  compton
+  929  picom &
+  930  clear 
+  931  clear
+  932  nv
+  933  cd ~/.fzf
+  934  ls
+  935  ll
+  936  nvim README
+  937  cd modernpy
+  938  cd
+  939  clear 
+  940  cd modernpy
+  941  cd ~/Clones/dope/monoid
+  942  ls
+  943  ll
+  944  cd Monoisome
+  945  ll
+  946  clear 
+  947  ll
+  948  ls 
+  949  ltr -l -a
+  950  clear 
+  951  ls 
+  952  ll
+  953  cd
+  954  clear 
+  955  ll
+  956  hostname
+  957  sudo hostnamectl set-hostname egungun
+  958  clear
+  959  exit
+  960  sudo updatedb -v
+  961  clear
+  962  Clones/dope/xmobar-0.37/src/Xmobar/Plugins/Monitors/Weather.hs 
+  963  Clones/dope/xmobar-0.37/src/Xmobar/Plugins/Monitors/
+  964  ls
+  965  nvim Weather.hs
+  966  ls
+  967  cd ..
+  968  ll
+  969  cd ..
+  970  ll
+  971  cd Config
+  972  ls
+  973  cd ..
+  974  ll
+  975  cd ..
+  976  ll
+  977  cat Xmobar
+  978  cat Xmobar.hs
+  979  clear 
+  980  ll
+  981  cd ..
+  982  ll
+  983  cd examples
+  984  ll
+  985  nvim xmobar.hs
+  986  ll
+  987  cd ..
+  988  ll
+  989  cd ..
+  990  ll
+  991  cp -rvp xmobar-0.37 ~/.config/xmobar
+  992  ll
+  993  cd ~/.config/xmobar
+  994  ls
+  995  clear 
+  996  ls
+  997  reboot
+  998  ls 
+  999  cd .xmonad
+ 1000  cd ../.config
+ 1001  ll
+ 1002  ll 
+ 1003  cd xmobar
+ 1004  ll
+ 1005  nvim xmobar.config
+ 1006  reboot
+ 1007  .config/xmobar
+ 1008  ll
+ 1009  cd xmobar-0.37
+ 1010  ll
+ 1011  cd examples
+ 1012  ls
+ 1013  nvim xmobar.config
+ 1014  cd ..
+ 1015  ll
+ 1016  cd ..
+ 1017  ll
+ 1018  nvim xmobar.config
+ 1019  reboot
+ 1020  ls
+ 1021  cd
+ 1022  cd .config/xmobar
+ 1023  ls
+ 1024  mv xmobar.config xmobar.config.bak.2
+ 1025  ll
+ 1026  clear 
+ 1027  wget https://raw.github.com/dymatic/dotfiles/master/master/.xmobarrc -o ~/.xmobarrc
+ 1028  nvim ~/.xmobarrc
+ 1029  rm -rf ~/.xmobarrc
+ 1030  ll
+ 1031  clear 
+ 1032  wget https://raw.github.com/dymatic/dotfiles/master/master/.xmobarrc
+ 1033  clear 
+ 1034  setopt verbose
+ 1035  ls
+ 1036  setopt noverbose
+ 1037  ls
+ 1038  clear
+ 1039  functions
+ 1040  echo $fpath
+ 1041  clear 
+ 1042  cd
+ 1043  clear
+ 1044  nvim Documents/zsh_goodness
+ 1045  disable
+ 1046  enable
+ 1047  enabled
+ 1048  nvim Documents/zsh_goodness
+ 1049  ls
+ 1050  clear
+ 1051  nvim Documents/zsh_goodness
+ 1052  setopt
+ 1053  dirs
+ 1054  nvim Documents/zsh_goodness 
+ 1055  hash
+ 1056  rehash
+ 1057  hash
+ 1058  exit
+ 1059  hash
+ 1060  nvim Documents/zsh_goodness 
+ 1061  whence -m "*l"
+ 1062  whence -m "l*"
+ 1063  whence -wm "l*"
+ 1064  nvim Documents/zsh_goodness 
+ 1065  setopt
+ 1066  cd /var/l/
+ 1067  cd /var/log/
+ 1068  ls
+ 1069  cd -
+ 1070  sudo pacman -Syyu gopher
+ 1071  head .hist
+ 1072  head .history
+ 1073  stat /var
+ 1074  r var=bin
+ 1075  stat /bin
+ 1076  nvim Documents/zsh_goodness 
+ 1077  setopt
+ 1078  cat zle
+ 1079  zle
+ 1080  echo $?
+ 1081  man zle
+ 1082  man zshzle
+ 1083  nvim Documents/zsh_goodness  
+ 1084  mkdir files
+ 1085  cd files
+ 1086  touch file_{0..100}
+ 1087  ll
+ 1088  zmv
+ 1089  autoload -U zmv
+ 1090  zmv 'file_(*)' 'log_$1'
+ 1091  ll
+ 1092  clear 
+ 1093  mkdir -p dir_{a..z}/{a..z} 
+ 1094  ll
+ 1095  ls 
+ 1096  cd dir_a
+ 1097  ll
+ 1098  cd ..
+ 1099  ll
+ 1100  touch dir_{a..z}/{a..z}/file{0..5}.{log,dat}
+ 1101  cd dir_a/a
+ 1102  ls
+ 1103  ll
+ 1104  ls **/
+ 1105  ls
+ 1106  cd ..
+ 1107  ll
+ 1108  cd ..
+ 1109  ls **/
+ 1110  ls
+ 1111  zmv '(**/)/(*).log' '$1$2.txt'
+ 1112  ls **/
+ 1113  zshcontrib
+ 1114  man zshcontrib
+ 1115  clear 
+ 1116  reboot
+ 1117  clones
+ 1118  ll
+ 1119  cd dope
+ 1120  ll
+ 1121  clear 
+ 1122  git clone https://github.com/vatrat/dotfiles vatrat-dotfiles
+ 1123  git clone https://github.com/vatrat/dotfiles.git vatrat-dotfiles
+ 1124  ip a s
+ 1125  git clone https://github.com/vatrat/dotfiles
+ 1126  exit
+ 1127  dhclient
+ 1128  sudo dhclient
+ 1129  ip a s
+ 1130  nmcli con reload
+ 1131  sudo systemctl restart NetworkManager
+ 1132  ip a s
+ 1133  reboot
+ 1134  ip a s
+ 1135  git clone https://github.com/vatrat/dotfiles
+ 1136  ll
+ 1137  mv dotfiles ~/Clones/dope/vatrat-dotfiles
+ 1138  cd ~/Clones/dope/vatrat-dotfiles
+ 1139  ll
+ 1140  clear 
+ 1141  cat installedout.txt
+ 1142  clear 
+ 1143  ll
+ 1144  cd ..
+ 1145  ll
+ 1146  git clone https://github.com/vatrat/dotfiles
+ 1147  cd dotfiles
+ 1148  ll
+ 1149  ls -a
+ 1150  cd ..
+ 1151  ll
+ 1152  rm -rf dotfiles
+ 1153  cd vatrat-dotfiles
+ 1154  ll
+ 1155  ls
+ 1156  ll
+ 1157  ls .
+ 1158  ls -a
+ 1159  cp .xmobarrc ~/
+ 1160  ll
+ 1161  cd
+ 1162  nvim .xmobarrc
+ 1163  ll
+ 1164  xmc
+ 1165  clear 
+ 1166  xmobar
+ 1167  clear 
+ 1168  cd -
+ 1169  ll
+ 1170  cd ..
+ 1171  ll
+ 1172  git clone https://github.com/willprice/dotfiles willprice-dotfiles
+ 1173  clear
+ 1174  ll
+ 1175  cd willprice-dotfiles
+ 1176  ll
+ 1177  clear 
+ 1178  cd xmobar
+ 1179  ll
+ 1180  ls -a
+ 1181  cp .xmobarrc ~/
+ 1182  ll
+ 1183  clear 
+ 1184  reboot
+ 1185  xmc
+ 1186  xmobar &
+ 1187  xmc
+ 1188  xmoc
+ 1189  cd .config/xmobar
+ 1190  ls
+ 1191  cp xmobar.config.bak.2 xmobar.config
+ 1192  reboot
+ 1193  ls /usr/share/zoneinfo
+ 1194  cat /usr/share/zoneinfo/US/Eastern
+ 1195  clear 
+ 1196  cd /usr/share/zoneinfo
+ 1197  ls
+ 1198  cd US
+ 1199  ls
+ 1200  cat Eastern
+ 1201  strings Eastern
+ 1202  nvim ~/.config/xmobar/xmobar.config
+ 1203  cd ~/.config/xmobar
+ 1204  ls
+ 1205  clear
+ 1206  ll
+ 1207  history | grep cp
+ 1208  echo > xmobar.config
+ 1209  nvim xmobar.config
+ 1210  clear
+ 1211  reboot
+ 1212  picom &
+ 1213  clear
+ 1214  picom &
+ 1215  exit
+ 1216  jobs
+ 1217  fg
+ 1218  clear
+ 1219  ll
+ 1220  reboot
+ 1221  ls 
+ 1222  clear 
+ 1223  picom &
+ 1224  xmobar &
+ 1225  rm -rf .xmobarrc
+ 1226  ll
+ 1227  clear 
+ 1228  xmobar
+ 1229  reboot
+ 1230  picom &
+ 1231  ll
+ 1232  exit
+ 1233  picom &
+ 1234  xmobar
+ 1235  cd .config/xmobar
+ 1236  ll
+ 1237  nvim xmobar.config
+ 1238  killall xmobar
+ 1239  reboot
+ 1240  exit
+ 1241  cd .config
+ 1242  ll
+ 1243  cd xmobar
+ 1244  ll
+ 1245  mv xmobar.config.lastone
+ 1246  mv xmobar.config xmobar.config.lastone
+ 1247  cp xmobar.config.bak xmobar.config
+ 1248  clear
+ 1249  picom &
+ 1250  ll
+ 1251  sudo pacman -Syyu xmonad-log
+ 1252  yay xmonad-log
+ 1253  yay install xmonad-log
+ 1254  yay xmonad-log
+ 1255  yay --help
+ 1256  yay --help | grep install
+ 1257  echo $GOPATH
+ 1258  cd $GOPATH
+ 1259  cd /home/abifoluwa/.config
+ 1260  ls
+ 1261  clear 
+ 1262  cd go
+ 1263  ls
+ 1264  pwd
+ 1265  mkdir go
+ 1266  ls
+ 1267  clear 
+ 1268  cd go
+ 1269  ll
+ 1270  clear 
+ 1271  git clone https://github.com/xintron/xmonad-log.git
+ 1272  ls
+ 1273  cd xmonad-log
+ 1274  ls
+ 1275  go build
+ 1276  go get github.com/godbus/dbus 
+ 1277  ls
+ 1278  cd ..
+ 1279  ll
+ 1280  cd -
+ 1281  ll
+ 1282  clear 
+ 1283  go build
+ 1284  sudo pacman -Syyu dbus
+ 1285  ls
+ 1286  clear 
+ 1287  ll
+ 1288  nvim ~/.xmonad/xmonad.hs
+ 1289  polybar
+ 1290  polybar example
+ 1291  clear 
+ 1292  reboot
+ 1293  clear 
+ 1294  ll
+ 1295  clones
+ 1296  cd dope
+ 1297  ll
+ 1298  clear 
+ 1299  git clone https://github.com/idzardh/dotfiles idzardh-dotfiles
+ 1300  ll
+ 1301  cd idzardh-dotfiles
+ 1302  ls
+ 1303  clear
+ 1304  ll
+ 1305  nvim xmonad.hs
+ 1306  cd .config
+ 1307  ll
+ 1308  cat redshift.conf
+ 1309  ls
+ 1310  cp -rpv polybar ~/.config
+ 1311  ls
+ 1312  sudo pacman -Syyu redshift
+ 1313  clear 
+ 1314  reboot
+ 1315  nv
+ 1316  xmoc
+ 1317  xmo
+ 1318  xm
+ 1319  xmod
+ 1320  alias | grep xm
+ 1321  xmc
+ 1322  reboot
+ 1323  ls 
+ 1324  clear 
+ 1325  ll
+ 1326  sudo pacman -Syyu lemonbar
+ 1327  clear 
+ 1328  ls
+ 1329  ll
+ 1330  clear 
+ 1331  cd
+ 1332  cd .xmonad
+ 1333  ls
+ 1334  clear 
+ 1335  ll
+ 1336  clear 
+ 1337  ls 
+ 1338  clones
+ 1339  ll
+ 1340  cd haskell
+ 1341  ls
+ 1342  clear
+ 1343  ll
+ 1344  mkdir imperative
+ 1345  cd imperative/
+ 1346  ll
+ 1347  clear 
+ 1348  cabal
+ 1349  ls
+ 1350  ls 
+ 1351  clear 
+ 1352  nvim fp.hs
+ 1353  nvim traversal.cpp
+ 1354  clear
+ 1355  cl traversal.cpp
+ 1356  pacman -Ss cl
+ 1357  pacman -Ss cmake 
+ 1358  sudo pacman -Syyu cmake g++ gcc
+ 1359  sudo pacman -Syyu cmake
+ 1360  g++
+ 1361  g++ traversal.cpp
+ 1362  ll
+ 1363  ./a.out
+ 1364  rm -rf a.out
+ 1365  ll
+ 1366  bitch
+ 1367  lazygit "Sigh.. " 
+ 1368  stack ghc -- -o Traversal Traversal.hs
+ 1369  ls
+ 1370  ./Traversal
+ 1371  nvim Reduction.hs
+ 1372  clear 
+ 1373  nvim Filter.hs
+ 1374  stack ghc -- -o Filter Filter.hs
+ 1375  stack ghc -- -o Reduction Reduction.hs
+ 1376  ll
+ 1377  ./Filter
+ 1378  ./Reduction
+ 1379  rm -rf Filter Reduction Traversal
+ 1380  ls
+ 1381  clear 
+ 1382  ll
+ 1383  clear 
+ 1384  lazygit "Sigh.. " 
+ 1385  nvim Composition.hs
+ 1386  clear
+ 1387  git status
+ 1388  lazygit "Composition."
+ 1389  cd 
+ 1390  cd .xmonad
+ 1391  ls
+ 1392  clear
+ 1393  ll
+ 1394  mv xmonad.hs{,.bak2|\n}
+ 1395  mv xmonad.hs{,.bak2}
+ 1396  ls
+ 1397  clear
+ 1398  nvim xmonad.hs
+ 1399  reboot
+ 1400  sudo pacman -R xmobar
+ 1401  reboot
+ 1402  picom &
+ 1403  clear 
+ 1404  clones
+ 1405  cd dope
+ 1406  ls
+ 1407  clear
+ 1408  ll
+ 1409  git clone https://github.com/xintron/configs
+ 1410  ls
+ 1411  cd configs
+ 1412  ll
+ 1413  clear 
+ 1414  ls -a
+ 1415  cd .xmonad
+ 1416  ls
+ 1417  clear
+ 1418  ll
+ 1419  cd ..
+ 1420  ll
+ 1421  cd
+ 1422  ll
+ 1423  mv .xmonad xmonad-back-egungun
+ 1424  ll
+ 1425  mv xmonad-back-egungun ~/Clones/dope
+ 1426  ll
+ 1427  clear 
+ 1428  clones
+ 1429  ll
+ 1430  cd dope
+ 1431  ls
+ 1432  clear 
+ 1433  ll
+ 1434  cp -rpv configs/.xmonad ~/
+ 1435  ls 
+ 1436  cd
+ 1437  reboot
+ 1438  ls 
+ 1439  rm -rf .xmonad
+ 1440  ls 
+ 1441  cp -rpv ~/Clones/dope/xmonad-back-egungun .xmonad
+ 1442  ll
+ 1443  ls 
+ 1444  cd .config
+ 1445  ll
+ 1446  cd ../.xmonad
+ 1447  ls
+ 1448  clear 
+ 1449  ll
+ 1450  cp xmonad.hs.bak2 xmonad.hs
+ 1451  nvim xmonad
+ 1452  ls
+ 1453  clear 
+ 1454  reboot
+ 1455  ls 
+ 1456  ll
+ 1457  ls 
+ 1458  ll
+ 1459  picom &
+ 1460  ls
+ 1461  clear 
+ 1462  polybar &
+ 1463  polybar -r
+ 1464  lemonbar
+ 1465  exit
+ 1466  clear
+ 1467  nvim xmonad 
+ 1468  nvc
+ 1469  xmc
+ 1470  reboot
+ 1471  sudo pacman -Syyu xmobar
+ 1472  clear 
+ 1473  reboot
+ 1474  nvim .xmonad/xmonad.hs
+ 1475  ls
+ 1476  htop
+ 1477  exit
+ 1478  lw
+ 1479  lshw
+ 1480  ls 
+ 1481  sudo pacman -Syyu ansible
+ 1482  ansible
+ 1483  clear 
+ 1484  clones
+ 1485  cd modernpy
+ 1486  ls
+ 1487  git status
+ 1488  git add -A
+ 1489  git commit -m "Teaching python. " 
+ 1490  git push
+ 1491  bitch 
+ 1492  git push
+ 1493  git pull
+ 1494  git push
+ 1495  sudo pacman -Syyu sdl2 sdl2_image sdl12_ttf
+ 1496  sudo pacman -Syyu sdl2 sdl2_image sdl2_ttf
+ 1497  nim
+ 1498  nimble
+ 1499  nimble install sdl2 strfmt
+ 1500  clear 
+ 1501  ls
+ 1502  clear 
+ 1503  ll
+ 1504  clones
+ 1505  ls
+ 1506  cd nim
+ 1507  l
+ 1508  git pull
+ 1509  clear 
+ 1510  ls 
+ 1511  cd Nimbo
+ 1512  ls
+ 1513  ls -a
+ 1514  cd DDNet-15.2.4-win64
+ 1515  ll
+ 1516  ls -a
+ 1517  ls 
+ 1518  clear 
+ 1519  ls
+ 1520  cd ../teeworlds-0.7.5-win32
+ 1521  ls
+ 1522  ls -a
+ 1523  cd ..
+ 1524  ll
+ 1525  clear 
+ 1526  code .
+ 1527  ls
+ 1528  clear 
+ 1529  nim -r c platformer.nim
+ 1530  clear 
+ 1531  git status
+ 1532  git add -A
+ 1533  git commit -m "More work on the platformer." 
+ 1534  git push
+ 1535  ls
+ 1536  clear 
+ 1537  code .
+ 1538  ll
+ 1539  nim -r c platformer.nim
+ 1540  reboot
+ 1541  code 
+ 1542  which code
+ 1543  which com.visualstudiocode
+ 1544  sudo updatedb -v
+ 1545  clear 
+ 1546  which *code*
+ 1547  com.visualstudio.code
+ 1548  which com.visualstudio.code
+ 1549  ln -s $(which com.visualstudio.code) /var/lib/flatpak/exports/bin/code
+ 1550  sudo ln -s $(which com.visualstudio.code) /var/lib/flatpak/exports/bin/code
+ 1551  clear
+ 1552  clones
+ 1553  ll
+ 1554  bitch
+ 1555  clear 
+ 1556  ll
+ 1557  cd nim
+ 1558  ls
+ 1559  clear
+ 1560  git statius
+ 1561  git status
+ 1562  clear
+ 1563  lazygit "By choosing ref type for the Game state type, we have an easy way to prevent accidently creating copies of it."
+ 1564  git log -p -2
+ 1565  ls 
+ 1566  cd Nimbo
+ 1567  ll
+ 1568  code .
+ 1569  which nim
+ 1570  clear 
+ 1571  nim compile --run platformer.nim
+ 1572  ls
+ 1573  clear 
+ 1574  git status
+ 1575  lazygit "Bummed... " 
+ 1576  clones
+ 1577  cd modernpy
+ 1578  ls
+ 1579  clear
+ 1580  cd vs
+ 1581  ll
+ 1582  clear 
+ 1583  nvim pclass.py
+ 1584  python3 pclass.py
+ 1585  nvim pclass.py 
+ 1586  fg
+ 1587  python3 pclass.py
+ 1588  nvim pclass.py  
+ 1589  python3 pclass.py
+ 1590  nvim pclass.py   
+ 1591  python3 pclass.py
+ 1592  nvim pclass.py    
+ 1593  python3 pclass.py
+ 1594  nvim pclass.py     
+ 1595  python3 pclass.py
+ 1596  lazygit "Assigned to mute points."
+ 1597  thunar &
+ 1598  ls 
+ 1599  clear
+ 1600  ls -tlr 
+ 1601  w
+ 1602  clear 
+ 1603  ls
+ 1604  ls 
+ 1605  clear 
+ 1606  sudo pacman -S linuxbrew
+ 1607  clear 
+ 1608  git status
+ 1609  cd
+ 1610  clear
+ 1611  nvim linuxbrew.sh
+ 1612  pamac
+ 1613  pamac search unity
+ 1614  pamac search rider
+ 1615  pamac install rider
+ 1616  sudo pamac install rider
+ 1617  reboot
+ 1618  ip a s
+ 1619  df -hT 
+ 1620  df -hT /home
+ 1621  df -hT /
+ 1622  df -hT | grep -v snapd
+ 1623  df -hT | grep -v snapd | grep -v tmpfs
+ 1624  cd /var/tmp
+ 1625  ls
+ 1626  clear 
+ 1627  cd /tmp
+ 1628  ls
+ 1629  rm -rf JetBrainsPerUserTemp-1000-1 
+ 1630  reboot
+ 1631  ls
+ 1632  s
+ 1633  clear 
+ 1634  TEMP=~/tmp 
+ 1635  mkdir ~/tmp
+ 1636  which flatpak
+ 1637  sudo updatedb -c
+ 1638  mkdir ~/tmp
+ 1639  TEMP=~/tmp 
+ 1640  sudo updatedb -v
+ 1641  clear 
+ 1642  /var/lib/flatpak/app/com.unity.UnityHub/x86_64/stable/active/files/bin/start-unityhub
+ 1643  /var/lib/flatpak/app/com.unity.UnityHub/x86_64/stable/active/files/bin/code
+ 1644  /var/lib/flatpak/app/com.unity.UnityHub/x86_64/stable/active/files/bin/zypak-wrapper
+ 1645  clear 
+ 1646  /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-unityhub --file-forwarding com.unity.UnityHub @@u %u @@
+ 1647  TEMP=~/tmp /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-unityhub --file-forwarding com.unity.UnityHub @@u %u @@
+ 1648  cd /var/lib/flatpak
+ 1649  ls
+ 1650  cd app/com.unity.UnityHub/
+ 1651  ls
+ 1652  TEMP=~/tmp /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-unityhub --file-forwarding com.unity.UnityHub @@u %u @@
+ 1653  clear 
+ 1654  ll
+ 1655  cd current/active/files/lib/debug
+ 1656  clear
+ 1657  ll
+ 1658  cd
+ 1659  clear
+ 1660  ll
+ 1661  cd /tmp
+ 1662  ls
+ 1663  cd ~/tmp
+ 1664  ls
+ 1665  clear
+ 1666  cd
+ 1667  rm -rf tmp
+ 1668  ls
+ 1669  clear
+ 1670  ll
+ 1671  reboot
+ 1672  clear 
+ 1673  ls 
+ 1674  sudo pacman -Syyu
+ 1675  clear 
+ 1676  sudo pacman -Syyu budgie-desktop
+ 1677  clea r
+ 1678  clear
+ 1679  reboot
+ 1680  sudo pacman -Syyu 
+ 1681  exit
+ 1682  sudo pacman -R budgie-desktop
+ 1683  reboot
+ 1684  cd Clones
+ 1685  ll
+ 1686  clear 
+ 1687  ll
+ 1688  cd modernpy
+ 1689  cd vs
+ 1690  clear
+ 1691  nvim type_def.py
+ 1692  clear
+ 1693  python3 type_def.py
+ 1694  echo $GOPATH 
+ 1695  nvim type_def.py 
+ 1696  echo $GOPATH 
+ 1697  python3 type_def.py
+ 1698  lazygit "Just confirm with yes or no." 
+ 1699  bitch
+ 1700  git push
+ 1701  git pull
+ 1702  git push
+ 1703  clear 
+ 1704  ls
+ 1705  clones
+ 1706  cd nim
+ 1707  ls 
+ 1708  cd Nimbo
+ 1709  ls
+ 1710  clear 
+ 1711  ll
+ 1712  cd ..
+ 1713  ll
+ 1714  cd Tutorial01
+ 1715  ls
+ 1716  clear
+ 1717  ll
+ 1718  mkdir Procedures
+ 1719  cd Procedures
+ 1720  ll
+ 1721  cd ..
+ 1722  ack -r proc
+ 1723  sudo pacman install ack ripgrep 
+ 1724  sudo pacman -S ack ripgrep 
+ 1725  clear 
+ 1726  ack -r proc
+ 1727  cp Express* Procedures
+ 1728  cd Procedures
+ 1729  ls
+ 1730  clear 
+ 1731  nvim Express.nim
+ 1732  ./Express
+ 1733  nvim Express.nim 
+ 1734  ./Express
+ 1735  nvim Express.nim  
+ 1736  nim c -r result.nim
+ 1737  ls 
+ 1738  clear
+ 1739  ll
+ 1740  ./result
+ 1741  nvim result.nim
+ 1742  clear 
+ 1743  emacs 
+ 1744  ll
+ 1745  lazygit "Removed the procedure out of Nim into result." 
+ 1746  clones
+ 1747  cd dotfiles
+ 1748  ls
+ 1749  clear 
+ 1750  ll
+ 1751  cd emacs
+ 1752  ll
+ 1753  clear 
+ 1754  ll
+ 1755  cat jj-escape-evil
+ 1756  emacs
+ 1757  exit
+ 1758  clear 
+ 1759  emacs
+ 1760  sudo pacman install lua
+ 1761  sudo pacman -S lua
+ 1762  elm
+ 1763  sudo pacman -S elm
+ 1764  sudo pacmac install elm
+ 1765  history | grep pacmac
+ 1766  sudo pamac install elm
+ 1767  getent passwd 
+ 1768  which troff
+ 1769  which nvim
+ 1770  which zsh
+ 1771  sudo pamac remove elm
+ 1772  sudo pamac delete elm
+ 1773  sudo pamac remove Elm
+ 1774  sudo pamac list 
+ 1775  sudo pamac list  | grep elm
+ 1776  clear 
+ 1777  exit
+ 1778  curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+ 1779  ll
+ 1780  gunzip elm.gz
+ 1781  ll
+ 1782  chmod +x elm
+ 1783  ll
+ 1784  clear 
+ 1785  ./elm
+ 1786  clear 
+ 1787  sudo mv elm /usr/bin/
+ 1788  ll
+ 1789  elm
+ 1790  clear 
+ 1791  ll
+ 1792  ls 
+ 1793  clear 
+ 1794  ll
+ 1795  exit
+ 1796  clear 
+ 1797  sudo pacman -S crystal
+ 1798  clear
+ 1799  sudo pacman install godot
+ 1800  sudo pacman -S godot
+ 1801  sudo pamac -S godot
+ 1802  sudo pamac install godot
+ 1803  ls
+ 1804  nvim modification.nim
+ 1805  nim c -r modification.nim
+ 1806  nvim modification.nim 
+ 1807  nv
+ 1808  clear
+ 1809  nvim modification.nim  
+ 1810  nim c -r modification.nim
+ 1811  nvim modification.nim   
+ 1812  clear 
+ 1813  nim c -r modification.nim
+ 1814  nv
+ 1815  nimble install nimlsp
+ 1816  nimble clean
+ 1817  nimble --help
+ 1818  nimble uninstall nimlsp
+ 1819  clear 
+ 1820  nimble install nimlsp
+ 1821  sudo pacman -R nim
+ 1822  nimble
+ 1823  sudo pacman -R nimble
+ 1824  clear
+ 1825  ll
+ 1826  nim
+ 1827  nimble
+ 1828  clear 
+ 1829  choosenim
+ 1830  choosenim stable
+ 1831  siz
+ 1832  nimble
+ 1833  oa
+ 1834  siz
+ 1835  clear
+ 1836  nimble
+ 1837  nim
+ 1838  clear 
+ 1839  nimble install nimlsp
+ 1840  ls 
+ 1841  nv
+ 1842  nvu
+ 1843  clear
+ 1844  nv
+ 1845  nvu
+ 1846  clear 
+ 1847  nv
+ 1848  nvim modification.nim
+ 1849  nv
+ 1850  nvim modification.nim
+ 1851  nv
+ 1852  clear
+ 1853  nvim modification.nim
+ 1854  clear 
+ 1855  exit 
+ 1856  clear 
+ 1857  gd
+ 1858  gdscript
+ 1859  clear 
+ 1860  exit
+ 1861  ~/.emacs.d/bin/doom upgrade
+ 1862  clear 
+ 1863  git status 
+ 1864  clear 
+ 1865  lazygit "Disregard is pretty cool.. sort of."
+ 1866  bitch
+ 1867  gp
+ 1868  clear
+ 1869  ll
+ 1870  nvim discard.nim
+ 1871  clear 
+ 1872  exec
+ 1873  exec zsh
+ 1874  reboot
+ 1875  clones
+ 1876  cd ni
+ 1877  cd nim
+ 1878  ls
+ 1879  clear 
+ 1880  cd Tutorial01
+ 1881  ls
+ 1882  cd Procedures
+ 1883  ls
+ 1884  clear
+ 1885  nim c -r discard.nim
+ 1886  ./discard
+ 1887  clear
+ 1888  ls
+ 1889  mv discard.nim discardand.nim
+ 1890  ls
+ 1891  nim
+ 1892  nim c
+ 1893  zsh -lvx | tee zsh-debug-out.txt
+ 1894  ack -r eval zsh-debug-out.txt
+ 1895  ack -r "eval" zsh-debug-out.txt
+ 1896  clear
+ 1897  exec zsh
+ 1898  ls
+ 1899  clear
+ 1900  nv
+ 1901  clear
+ 1902  nv
+ 1903  nvim +PlugClean
+ 1904  exit
+ 1905  reboot
+ 1906  nim
+ 1907  clones
+ 1908  cd nim
+ 1909  ll
+ 1910  cd Tutorial01/Procedures
+ 1911  ls
+ 1912  exit
+ 1913  nvim .aliases.zsh
+ 1914  nvim .zshrc
+ 1915  siz
+ 1916  reboot
+ 1917  clones
+ 1918  ll
+ 1919  cd nim
+ 1920  ls
+ 1921  clear 
+ 1922  cd Tutorial01/Procedures
+ 1923  ls
+ 1924  clear
+ 1925  nim 
+ 1926  nim compile --run discardand.nim
+ 1927  nvim .zshrc 
+ 1928  oa
+ 1929  nv
+ 1930  nvu
+ 1931  clear
+ 1932  nim compile --run discardand.nim
+ 1933  nvim .zshrc  
+ 1934  clear 
+ 1935  ./discardand
+ 1936  ls 
+ 1937  nvim naming_args.nim
+ 1938  nim naming_args.nim
+ 1939  nim compile --run naming_args.nim
+ 1940  nvim naming_args.nim 
+ 1941  nim compile --run naming_args.nim
+ 1942  nvim naming_args.nim  
+ 1943  nim compile --run naming_args.nim
+ 1944  nvim naming_args.nim   
+ 1945  nim compile --run naming_args.nim
+ 1946  nvim naming_args.nim    
+ 1947  nim compile --run naming_args.nim
+ 1948  nvim naming_args.nim   
+ 1949  clear 
+ 1950  git status
+ 1951  lazygit "last contrib."
+ 1952  bitch
+ 1953  gp
+ 1954  clear 
+ 1955  nimble install csfml
+ 1956  go get -u gopkg.in/teh-cmc/go-smf.v24/...
+ 1957  go get -u gopkg.in/teh-cmc/go-smf.v24
+ 1958  go get gopkg.in/teh-cmc/go-smf.v24
+ 1959  go get gopkg.in/teh-cmc/go-sfml.v24
+ 1960  ll /home/abifoluwa/.config/go
+ 1961  ll /home/abifoluwa/.config/go/src
+ 1962  ll /home/abifoluwa/.config/go/src/gopkg.in
+ 1963  ll /home/abifoluwa/.config/go/src/gopkg.in/teh-cmc/go-sfml.v24
+ 1964  clear 
+ 1965  pacman -Qs sfml
+ 1966  sudo pacman -Qs sfml
+ 1967  sudo pamac search sfml
+ 1968  sudo pamac install sfml
+ 1969  sudo pamac install sfml-bin
+ 1970  csfml
+ 1971  clear 
+ 1972  sfml
+ 1973  clear 
+ 1974  shards
+ 1975  pamac search shards
+ 1976  crystal
+ 1977  sudo pamac install shards
+ 1978  shards install crsfml
+ 1979  ls
+ 1980  clear 
+ 1981  sudo pamac install crsfml
+ 1982  ls 
+ 1983  clear 
+ 1984  pip3 install pySFML 
+ 1985  pip3 install pysfml
+ 1986  pip3 install pysfml --user
+ 1987  pip3 search pysfml
+ 1988  pip install pysfml
+ 1989  pip install pysfml --user
+ 1990  clear 
+ 1991  ll
+ 1992  clear 
+ 1993  cd ..
+ 1994  ll
+ 1995  cd ../Nimbo
+ 1996  ll
+ 1997  clear
+ 1998  ll
+ 1999  nvim platformer
+ 2000  lazygit "Those darn \s's" 
+ 2001  clear 
+ 2002  ll
+ 2003  nvim platformer.nim
+ 2004  sl 
+ 2005  ls
+ 2006  clear 
+ 2007  ll
+ 2008  clear 
+ 2009  sudo pacman -Syyu zeal
+ 2010  sudo pamac install zeal
+ 2011  ls 
+ 2012  clear 
+ 2013  sudo pamac install qutebrowser
+ 2014  clones
+ 2015  cd moderncpp
+ 2016  ll
+ 2017  clear
+ 2018  ll
+ 2019  nvim templates
+ 2020  mkdir templates
+ 2021  ll
+ 2022  clear 
+ 2023  cd templates
+ 2024  ll
+ 2025  clear
+ 2026  nvim vcontainers.cpp
+ 2027  g++ -std=20 -o vcontainers vcontainers.cpp
+ 2028  g++ -std=c2x -o vcontainers vcontainers.cpp
+ 2029  nvim vcontainers.cpp
+ 2030  g++ -std=c2x -o vcontainers vcontainers.cpp
+ 2031  mpv
+ 2032  mpv https://www.youtube.com/watch\?v\=Av8Sfaprcb4
+ 2033  sudo mpv https://www.youtube.com/watch\?v\=Av8Sfaprcb4
+ 2034  clear 
+ 2035  git status
+ 2036  git add -A 
+ 2037  git commit -m "Cpp vibes." 
+ 2038  git push 
+ 2039  bitch 
+ 2040  gp
+ 2041  clear 
+ 2042  mpv "C:/Program Files/mpv/youtube-dl" --no-warnings -J --flat-playlist --sub-format ass/srt/bes
+ 2043  mpv https://youtu.be/Av8Sfaprcb4
+ 2044  pacman -Q youtube-dl
+ 2045  sudo pacman -S youtube-dl
+ 2046  mpv https://youtu.be/Av8Sfaprcb4
+ 2047  clear 
+ 2048  exit
+ 2049  sudo pamac install blender 
+ 2050  sudo pacman -S iceweasal
+ 2051  reboot
+ 2052  sudo pacman -Syyu alacritty
+ 2053  ls
+ 2054  clear
+ 2055  ll
+ 2056  cat linuxbrew.sh
+ 2057  rm -rf linuxbrew.sh
+ 2058  ll
+ 2059  clear
+ 2060  ls 
+ 2061  nix
+ 2062  sudo pacman -S nix
+ 2063  sudo pacman -S nixos
+ 2064  sudo pamac install nix
+ 2065  nix
+ 2066  nix os
+ 2067  nix
+ 2068  clear 
+ 2069  ls
+ 2070  clear 
+ 2071  ls 
+ 2072  clear
+ 2073  ll
+ 2074  clear 
+ 2075  w
+ 2076  clear
+ 2077  nu
+ 2078  clear
+ 2079  sudo pamac search nu
+ 2080  sudo pamac search nushell
+ 2081  sudo pamac install nushell
+ 2082  nushell
+ 2083  nu
+ 2084  sudo pamac install rustup
+ 2085  sudo pamac install nushell
+ 2086  rustup
+ 2087  reset
+ 2088  sudo pamac install nushell
+ 2089  mkdir ~/.rustup
+ 2090  sudo pamac install nushell
+ 2091  sudo pamac install nushell-bin
+ 2092  nu
+ 2093  clear 
+ 2094  clones
+ 2095  ll
+ 2096  clear 
+ 2097  libsfml-dev
+ 2098  sudo pamac install libsfml-dev
+ 2099  sudo pacman -S libsfml-dev
+ 2100  sudo pacman -S libsfml
+ 2101  sudo pamac install libsfml
+ 2102  cd moderncpp
+ 2103  ls
+ 2104  clear
+ 2105  ll
+ 2106  mkdir sfml
+ 2107  cd sfml
+ 2108  ls
+ 2109  clear
+ 2110  nvim main.cpp
+ 2111  git clone https://github.com/SFML/SFML.git
+ 2112  ls
+ 2113  nvim main.cpp
+ 2114  clear 
+ 2115  g++ -c main.cpp
+ 2116  ll
+ 2117  ./
+ 2118  ll
+ 2119  g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+ 2120  ll
+ 2121  ./sfml-app
+ 2122  echo $LD_LIBRARY_PATH
+ 2123  nvim main.cpp 
+ 2124  ls 
+ 2125  clear 
+ 2126  ./sfml-app
+ 2127  lspci
+ 2128  lspci | grep cuda
+ 2129  pacman -Qs nvidia
+ 2130  sudo pacman -S glxinfo
+ 2131  sudo pamac install glxinfo
+ 2132  ./sfml-app
+ 2133  strace glxinfo 2>&1 | tail -n66
+ 2134  sudo pacman -S strace
+ 2135  strace glxinfo 2>&1 | tail -n66
+ 2136  ./sfml-app
+ 2137  lspci -k | grep -A 2 -E "(VGA|3D)"
+ 2138  sudo pacman -S optimus-manager
+ 2139  reboot
+ 2140  optimus-manager
+ 2141  clear 
+ 2142  mpv https://www.youtube.com/watch\?v\=nlGllxnSfgA
+ 2143  clear 
+ 2144  tree
+ 2145  sudo pacman -S tree 
+ 2146  pacman -Qs tree
+ 2147  sudo pacman -S tree -yyu
+ 2148  reboot
+ 2149  ~ls
+ 2150  clear 
+ 2151  pip3 install opencv-python
+ 2152  clear 
+ 2153  clones
+ 2154  ll
+ 2155  clear 
+ 2156  cd modernpy
+ 2157  ll
+ 2158  mkdir opencv
+ 2159  cd opencv
+ 2160  ll
+ 2161  clear 
+ 2162  cd ../
+ 2163  clones
+ 2164  cd moderncpp
+ 2165  ll
+ 2166  mkdir opencv
+ 2167  cd opencv
+ 2168  ll
+ 2169  clear
+ 2170  nvim DisplayImage.cpp
+ 2171  clear
+ 2172  nvim CMakeLists.txt
+ 2173  clear 
+ 2174  ll
+ 2175  cd ..
+ 2176  ll
+ 2177  mv opencv DisplayImage
+ 2178  cd DisplayImage
+ 2179  ll
+ 2180  clear 
+ 2181  cmake .
+ 2182  sudo pacman -S opencv
+ 2183  clear 
+ 2184  cmake .
+ 2185  ls
+ 2186  rm -rf CMakeCache.txt CMakeFiles
+ 2187  ll
+ 2188  clear
+ 2189  cmake .
+ 2190  sudo pacman -S clang++ clang
+ 2191  sudo pacman -S clang
+ 2192  sudo pacman -S clang++
+ 2193  sudo pacman -S llvm
+ 2194  sudo pacman -S g++
+ 2195  sudo pacman -S g
+ 2196  clear 
+ 2197  git status 
+ 2198  git add -A
+ 2199  git pull
+ 2200  bitch
+ 2201  git pull
+ 2202  lazygit "Lets OpenCV or not. " 
+ 2203  ls
+ 2204  rm -rf CMakeCache.txt CMakeFiles
+ 2205  ll
+ 2206  clear 
+ 2207  reboot
+ 2208  sudo pacman -Syyu 
+ 2209  clear 
+ 2210  clones
+ 2211  cd moderncpp/DisplayImage
+ 2212  ll
+ 2213  clear
+ 2214  git status
+ 2215  bitch
+ 2216  clear 
+ 2217  lazygit "Lets OpenCV or not. " 
+ 2218  ls
+ 2219  clear 
+ 2220  ll
+ 2221  cmake .
+ 2222  which cmake
+ 2223  sudo updatedb -v
+ 2224  ls 
+ 2225  clear
+ 2226  ll
+ 2227  nvim DisplayImage.cpp
+ 2228  clones
+ 2229  cd dope
+ 2230  ll
+ 2231  clear
+ 2232  nvim init.cpp
+ 2233  clear 
+ 2234  ls 
+ 2235  ll
+ 2236  ls 
+ 2237  clear 
+ 2238  ls 
+ 2239  git status
+ 2240  cd ..
+ 2241  ll
+ 2242  cd dotfiles
+ 2243  bitch
+ 2244  git pull
+ 2245  clear 
+ 2246  aurman
+ 2247  sudo pamac install aurman
+ 2248  clear
+ 2249  sudo pacman install aurman
+ 2250  sudo pacman -S aurman
+ 2251  sudo pamac install aurman
+ 2252  pamac --help
+ 2253  pamac clean
+ 2254  sudo pamac install aurman
+ 2255  clear 
+ 2256  ll
+ 2257  aurman -S hyper
+ 2258  clear
+ 2259  hyperconfig
+ 2260  clear
+ 2261  cd .config
+ 2262  ls
+ 2263  cd Hyper
+ 2264  ll
+ 2265  clear 
+ 2266  ls
+ 2267  nvim config.json
+ 2268  ls
+ 2269  cd blob_storage
+ 2270  ls
+ 2271  cd ..
+ 2272  ll
+ 2273  cd ..
+ 2274  ls
+ 2275  nvim ~/.hyper.js
+ 2276  clear 
+ 2277  ls
+ 2278  clear 
+ 2279  ll
+ 2280  clear 
+ 2281  ls
+ 2282  ls 
+ 2283  cd h
+ 2284  cd Hyper/
+ 2285  ls
+ 2286  ll
+ 2287  bat 
+ 2288  sudo pacman -S bat
+ 2289  ls
+ 2290  clear 
+ 2291  ll
+ 2292  gnv
+ 2293  ls
+ 2294  clear
+ 2295  ll
+ 2296  lll
+ 2297  ll
+ 2298  ls -a
+ 2299  ll
+ 2300  cp -rpv ~/Clones/dotfiles/neovim/nvim/* .
+ 2301  ll
+ 2302  clear 
+ 2303  ll
+ 2304  ls
+ 2305  ll
+ 2306  nvim
+ 2307  clear 
+ 2308  nvim ~/.aliases.zsh
+ 2309  cd
+ 2310  mv .aliases.zsh .aliases
+ 2311  ls
+ 2312  clear
+ 2313  cp ~/Clones/dotfiles/aliases/.aliases.zsh .
+ 2314  ll
+ 2315  clear 
+ 2316  nvim .zshrc
+ 2317  clear 
+ 2318  nvim .hyper.js
+ 2319  clear
+ 2320  ll
+ 2321  clear 
+ 2322  siz
+ 2323  nvim .aliases.zsh
+ 2324  whoami
+ 2325  nvim .aliases.zsh 
+ 2326  sudo pacman -S composer
+ 2327  clear
+ 2328  ll
+ 2329  which composer
+ 2330  composer
+ 2331  composer global require "laravel/installer"
+ 2332  ls
+ 2333  siz
+ 2334  clear
+ 2335  laravel
+ 2336  clear
+ 2337  ls 
+ 2338  lsattr
+ 2339  clones
+ 2340  cd dotfiles
+ 2341  mkdir coc.nvim
+ 2342  ll
+ 2343  cd coc.nvim
+ 2344  ll
+ 2345  clear 
+ 2346  ls
+ 2347  clear
+ 2348  ll
+ 2349  nvim
+ 2350  clones
+ 2351  cd moderncpp
+ 2352  ll
+ 2353  git pull
+ 2354  bitch
+ 2355  git pull
+ 2356  git status 
+ 2357  lazygit "um.. " 
+ 2358  ls
+ 2359  cd templates
+ 2360  ll
+ 2361  clear
+ 2362  nvim main
+ 2363  ls
+ 2364  clear
+ 2365  ls
+ 2366  cd ..
+ 2367  ls -a
+ 2368  cp .ccls templates
+ 2369  ll
+ 2370  clear 
+ 2371  ls
+ 2372  cd templates
+ 2373  ll
+ 2374  nvim main.cpp
+ 2375  nv
+ 2376  gnv
+ 2377  ls
+ 2378  nvim settings.vim
+ 2379  ls
+ 2380  nvim settings.vim
+ 2381  nvim coc.vim
+ 2382  cd ~/.config/
+ 2383  ls
+ 2384  cd co
+ 2385  cd coc
+ 2386  ls
+ 2387  cd extensions
+ 2388  ls
+ 2389  ln -s ~/.config/coc/extensions/node_modules/coc-ccls/node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
+ 2390  ls
+ 2391  clear
+ 2392  ls
+ 2393  gnv
+ 2394  ls
+ 2395  nvim init.vim
+ 2396  ls
+ 2397  nvim coc.vim
+ 2398  lua
+ 2399  clear 
+ 2400  ll
+ 2401  clones
+ 2402  cd lua
+ 2403  ls
+ 2404  clear 
+ 2405  ll
+ 2406  git clone git@github.com:hoodielive/lua
+ 2407  ll
+ 2408  cd lua
+ 2409  ll
+ 2410  nvim drawingText.lua
+ 2411  nvim ~/.config/nvim/plugins.vim
+ 2412  nvim 
+ 2413  clear
+ 2414  luarocks
+ 2415  sudo pacman -S luarocks
+ 2416  luarocks install --server=http://luarocks.org/dev lua-lsp
+ 2417  sudo luarocks install --server=http://luarocks.org/dev lua-lsp
+ 2418  sudo luarocks --check-lua-versions install --server=http://luarocks.org/dev lua-lsp
+ 2419  sudo luarocks --check-lua-versions 
+ 2420  luarocks install luacheck
+ 2421  sudo luarocks install luacheck
+ 2422  luarocks install luacheck --local
+ 2423  luarocks install lua-lsp --local
+ 2424  luarocks install --server=http://luarocks.org/dev lua-lsp
+ 2425  sudo pacman -S lua-lsp
+ 2426  sudo pamac -S lua-lsp
+ 2427  sudo pacman install lua-lsp
+ 2428  sudo pamac install lua-lsp
+ 2429  nvim drawingText.lua
+ 2430  nvim archive/learn_lua.lua
+ 2431  ls
+ 2432  clear 
+ 2433  cd ..
+ 2434  ll
+ 2435  ls 
+ 2436  clear 
+ 2437  oa
+ 2438  gtc
+ 2439  giz
+ 2440  siz
+ 2441  gtc
+ 2442  ls
+ 2443  clear 
+ 2444  nvim ranger
+ 2445  pip3 install ueberzug
+ 2446  clear
+ 2447  git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+ 2448  ls
+ 2449  cd ranger
+ 2450  ll
+ 2451  clear 
+ 2452  cd plugins/ranger_devicons
+ 2453  ls
+ 2454  clear
+ 2455  ll
+ 2456  pip3 install rnvimr
+ 2457  ranger
+ 2458  ranger --version
+ 2459  apt search ranger-fm
+ 2460  sudo pacman -Qs ranger-fm
+ 2461  pamac search ranger-fm
+ 2462  cd
+ 2463  cd Pictures
+ 2464  ls
+ 2465  cd Wallpaper
+ 2466  ll
+ 2467  clear 
+ 2468  ranger
+ 2469  reboot
+ 2470  exit
+ 2471  ranger
+ 2472  sudo pamac install w3m
+ 2473  sudo pacman -Syyu w3m
+ 2474  clear 
+ 2475  ranger
+ 2476  gtc
+ 2477  ls
+ 2478  cd ranger
+ 2479  ls
+ 2480  clear
+ 2481  nvim rc.conf
+ 2482  ranger
+ 2483  sudo pacman -S rxvt-unicode-picbuf
+ 2484  sudo pacman -S rxvt-unicode-pixbuf
+ 2485  sudo pacman -Qs rxvt-unicode
+ 2486  sudo pacman -S rxvt-unicode
+ 2487  sudo pacman -S rxvt-unicode-terminfo
+ 2488  ln -s ~/.aliases.zsh ~/Clones/dotfiles/aliases/aliases.zsh-archlinux
+ 2489  git status
+ 2490  cd
+ 2491  clear 
+ 2492  cd Clones
+ 2493  ls
+ 2494  clear
+ 2495  cd dotfiles
+ 2496  ls
+ 2497  clear
+ 2498  git pull
+ 2499  bitch
+ 2500  bit pull
+ 2501  git pull
+ 2502  clear 
+ 2503  lazygit "naming convention updated - tired of maintaining 1 file.. lets add some sort of sanity to it albeit it may not be that nontrivial"
+ 2504  clear 
+ 2505  sudo pacman -S vifman 
+ 2506  sudo pacman -S vifm 
+ 2507  vifm
+ 2508  clear 
+ 2509  echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+ 2510  locale -a
+ 2511  nvim 
+ 2512  ls
+ 2513  nvim todolist.todo
+ 2514  oa
+ 2515  siz
+ 2516  nvs
+ 2517  clear
+ 2518  pwd
+ 2519  ls -a
+ 2520  nvim .gitignore
+ 2521  clear 
+ 2522  git config core.symlinks true
+ 2523  git config --list
+ 2524  ls 
+ 2525  nvim ~/.aliases.zsh
+ 2526  siz
+ 2527  git status
+ 2528  git config core.symlinks false
+ 2529  ls
+ 2530  clear
+ 2531  ll
+ 2532  siz
+ 2533  clear 
+ 2534  ora
+ 2535  git config core.symlinks true
+ 2536  git config --global core.symlinks true
+ 2537  exit
+ 2538  sudo reboot
+ 2539  ls
+ 2540  clones
+ 2541  bitch
+ 2542  clear 
+ 2543  sudo pacman -Syyu 
+ 2544  clear
+ 2545  ll
+ 2546  cd dotfiles
+ 2547  ls
+ 2548  clear 
+ 2549  oa
+ 2550  ls
+ 2551  cat 1
+ 2552  clear
+ 2553  ls
+ 2554  rm -rf 1
+ 2555  clear
+ 2556  oa
+ 2557  ls
+ 2558  sudo nvim /etc/motd
+ 2559  clear
+ 2560  exit
+ 2561  sudo pamac install polybar
+ 2562  cd /var/lib/pacman/sync/
+ 2563  ls
+ 2564  ll
+ 2565  clear
+ 2566  sudo pacman -Syyu polybar
+ 2567  cd ~/.config/polybar
+ 2568  ls
+ 2569  clear 
+ 2570  nvim config
+ 2571  ls 
+ 2572  sudo pacman -S lua
+ 2573  clear 
+ 2574  ls -tlr 
+ 2575  exit
+ 2576  cd .config
+ 2577  ls
+ 2578  mkdir awesome
+ 2579  ll
+ 2580  clear
+ 2581  find / -iname rc.lua
+ 2582  sudo find / -iname rc.lua
+ 2583  cd awesome
+ 2584  ls
+ 2585  cp /etc/xdg/awesome/rc.lua .
+ 2586  ll
+ 2587  clear 
+ 2588  nvim rc.lua
+ 2589  reboot
+ 2590  hyperconfig
+ 2591  gtc
+ 2592  ls
+ 2593  cd Hyper
+ 2594  ls
+ 2595  clear 
+ 2596  ls
+ 2597  nvim config.json
+ 2598  cd
+ 2599  nvim .hyper.js
+ 2600  sudo pacman -Syyu alacrityy
+ 2601  sudo pacman -Syyu alacritty
+ 2602  clear
+ 2603  gtc
+ 2604  ls
+ 2605  clear
+ 2606  ll
+ 2607  cd awesome/
+ 2608  nvim rc.lua
+ 2609  clear
+ 2610  exit
+ 2611  reboot
+ 2612  nvim .config/awesome/rc.lua
+ 2613  clear
+ 2614  sudo pacman -S dmenu pcmanfm
+ 2615  pacman --help 
+ 2616  man pacman
+ 2617  clear 
+ 2618  sudo pacman -c
+ 2619  sudo pacman -Syyu -c
+ 2620  sudo pacman --clean
+ 2621  reboot
+ 2622  cd .config/
+ 2623  mkdir alacritty
+ 2624  cd alacritty
+ 2625  nvim alacritty.yml
+ 2626  clear 
+ 2627  ll
+ 2628  sudo pacman -R alacritty
+ 2629  clear
+ 2630  ls 
+ 2631  clear 
+ 2632  sudo pamac install pcmanfm
+ 2633  sudo pamac install termite
+ 2634  sudo pamac install suckless-tools
+ 2635  sudo pacman -S suckless-tools
+ 2636  sudo pacman -S notable
+ 2637  reboot
+ 2638  exit
+ 2639  cd .config/awesome
+ 2640  ll
+ 2641  nvim rc.lua
+ 2642  sudo pamac install dropbox
+ 2643  sudo -s
+ 2644  ll
+ 2645  nvim rc.lua
+ 2646  exit
+ 2647  nvim rc.lua
+ 2648  cd .config
+ 2649  cd awesome
+ 2650  ll
+ 2651  clear
+ 2652  nvim rc.lua
+ 2653  exit 
+ 2654  cd .config/qutebrowser
+ 2655  cd ..
+ 2656  ls
+ 2657  sudo locate termite
+ 2658  cp /etc/xdg/termite/config termite/
+ 2659  ls
+ 2660  mkdir termite
+ 2661  cp /etc/xdg/termite/config termite/
+ 2662  ll
+ 2663  cd termite
+ 2664  ll
+ 2665  clear
+ 2666  nvim config
+ 2667  exit
+ 2668  gtc
+ 2669  cd termite
+ 2670  nvim config
+ 2671  cd ../awesome
+ 2672  nvim rc.lua
+ 2673  nvim ~/.aliases.zsh
+ 2674  sudo pacman -S fortune
+ 2675  sudo pamac install fortune
+ 2676  sudo pacman -S quotes
+ 2677  sudo pamac install quotes
+ 2678  siz
+ 2679  cd -
+ 2680  clear
+ 2681  sudo pacman -S alacritty
+ 2682  clear
+ 2683  cd ../alacritty
+ 2684  ls
+ 2685  nvim alacritty.yml
+ 2686  cd ../awesome
+ 2687  ls
+ 2688  nvim rc.lua
+ 2689  reboot
+ 2690  exit
+ 2691  q!
+ 2692  exit
+ 2693  sudo pacman -R alacritty
+ 2694  sudo pamac install alacritty-git
+ 2695  ls 
+ 2696  ll .rustup
+ 2697  chmod -R 0777 .rustup
+ 2698  clear
+ 2699  sudo pamac install alacritty-git
+ 2700  lsatrr .rustup
+ 2701  lsattr .rustup
+ 2702  lsattr ~
+ 2703  df -hT | grep -v snapd | grep -v tmpfs
+ 2704  lsblk -f 
+ 2705  mount -o remount,rw ~/.rustup
+ 2706  sudo mount -o remount,rw ~/.rustup
+ 2707  chmod -R 0777 .rustup
+ 2708  sudo pamac install rustup-git
+ 2709  nvim /etc/fstab
+ 2710  which rustup-init
+ 2711  which rustup
+ 2712  oa
+ 2713  nvim /etc/fstab 
+ 2714  oa
+ 2715  cargo
+ 2716  clear 
+ 2717  siz
+ 2718  cargo
+ 2719  clear
+ 2720  pamac search ranger-fm
+ 2721  sudo pamac install alacritty-git
+ 2722  echo $pkgdir
+ 2723  rustup-init -y 
+ 2724  rm -rf ~/.rustup
+ 2725  ls
+ 2726  clear
+ 2727  sudo pamac install alacritty-git
+ 2728  sudo pacman -R rustup
+ 2729  sudo pacman install rustup-init
+ 2730  sudo pacman -S rustup-init
+ 2731  sudo pamac install rustup-init
+ 2732  sudo pamac search rustup
+ 2733  sudo pamac install rustup-git
+ 2734  sudo pamac install cargo-git
+ 2735  rust
+ 2736  sudo pamac uninstall rustup
+ 2737  sudo pamac remove rustup
+ 2738  cargo
+ 2739  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ 2740  mv /share/doc/rust /var/tmp
+ 2741  sudo updatedb -v
+ 2742  locate rust
+ 2743  snap remove rust
+ 2744  sudo snap remove rust
+ 2745  mv /share/doc/rust /var/tmp
+ 2746  locate rust | grep share
+ 2747  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ 2748  source $HOME/.cargo/env
+ 2749  ls
+ 2750  clear
+ 2751  cargo
+ 2752  clear 
+ 2753  sudo pamac install alacritty-git
+ 2754  clear
+ 2755  cargo install alacritty
+ 2756  source $HOME/.cargo/env
+ 2757  alacritty
+ 2758  /home/abifoluwa/.cargo/bin/alacritty
+ 2759  cd .config/termite
+ 2760  ll
+ 2761  cp config ~/termite-config
+ 2762  ll
+ 2763  clear
+ 2764  sudo pacman -R termite
+ 2765  clear 
+ 2766  sudo pamac install termite
+ 2767  sudo pamac install termite-git
+ 2768  exit
+ 2769  ls
+ 2770  ~/.config
+ 2771  ls
+ 2772  cd termite
+ 2773  ls
+ 2774  nvim config
+ 2775  clear 
+ 2776  nvim config
+ 2777  cd ..
+ 2778  ll
+ 2779  mkdir picom
+ 2780  cd p
+ 2781  cd picom
+ 2782  ls
+ 2783  clear
+ 2784  nvim picom.conf
+ 2785  reboot
+ 2786  picom
+ 2787  cd ~/.config/picom
+ 2788  nvim picom.conf
+ 2789  picom
+ 2790  picom &
+ 2791  clear 
+ 2792  cd ../awesome
+ 2793  ls
+ 2794  nvim rc.lua
+ 2795  nvim rc.lua 
+ 2796  reboot
+ 2797  gtc
+ 2798  cd termite
+ 2799  nvim config
+ 2800  exit
+ 2801  reboot
+ 2802  gtc
+ 2803  cd awesome
+ 2804  nvim rc.lua
+ 2805  whoami
+ 2806  nvim rc.lua 
+ 2807  clear 
+ 2808  ll
+ 2809  git clone https://github.com/Elv13/collision
+ 2810  ls
+ 2811  clear
+ 2812  nvim rc.lua
+ 2813  exit
+ 2814  nvim rc.lua
+ 2815  exit
+ 2816  reboot
+ 2817  cd .oh-my-zsh
+ 2818  ls
+ 2819  cd themes
+ 2820  ls
+ 2821  nvim ~/.config/awesome/rc.lua
+ 2822  sudo pamac install feh-git
+ 2823  ranger
+ 2824  zshconfig
+ 2825  siz
+ 2826  clear 
+ 2827  polybar examples
+ 2828  polybar --examples
+ 2829  polybar
+ 2830  sudo pacman -R poly
+ 2831  gtc
+ 2832  ls
+ 2833  clear 
+ 2834  ll
+ 2835  cd polybar
+ 2836  ls
+ 2837  clear
+ 2838  ll
+ 2839  nvim config
+ 2840  nvim config 
+ 2841  polybar laptop
+ 2842  polybar base
+ 2843  polybar laptop
+ 2844  nvim config  
+ 2845  polybar laptop
+ 2846  nvim config   
+ 2847  cd ..
+ 2848  sudo pacman -R polybar
+ 2849  sudo yay -S polybar-git
+ 2850  yay -S polybar-git
+ 2851  cd polybar
+ 2852  ls
+ 2853  nvim config
+ 2854  polybar laptop
+ 2855  ll /usr/share/doc/polybar/config
+ 2856  cp /usr/share/doc/polybar/config config-example
+ 2857  ll
+ 2858  nvim config-example
+ 2859  mv config config-old
+ 2860  cp config-example config
+ 2861  nvim config
+ 2862  clear 
+ 2863  polybar abifoluwa
+ 2864  clear 
+ 2865  cd ../awesome
+ 2866  nvim rc.lua
+ 2867  cp rc.lua rc.lua.backup
+ 2868  ll
+ 2869  clear
+ 2870  nvim rc.lua
+ 2871  ls
+ 2872  cd ../polybar
+ 2873  ls
+ 2874  clear
+ 2875  l
+ 2876  nvim launch.sh
+ 2877  clear 
+ 2878  v config
+ 2879  pac -S kmix
+ 2880  yay -S kmix
+ 2881  yay -S network-manager-applet
+ 2882  v ../awesome/rc.lua
+ 2883  nvim launch.sh 
+ 2884  nvim config
+ 2885  ack -r -i volume
+ 2886  ack -r -i volume | grep module
+ 2887  nvim config 
+ 2888  reboot
+ 2889  cd ~/Pictures
+ 2890  ls
+ 2891  clear 
+ 2892  git clone https://gitlab.com/dwt1/wallpapers.git
+ 2893  ls
+ 2894  mv wallpapers/* Wallpaper/
+ 2895  ll
+ 2896  clear 
+ 2897  rm -rf wallpapers
+ 2898  ls
+ 2899  clear 
+ 2900  ll
+ 2901  siz
+ 2902  ack -r -i themes ~/.aliases.zsh
+ 2903  themer
+ 2904  zshconfig
+ 2905  nvim config  
+ 2906  zshconfig
+ 2907  clear 
+ 2908  siz
+ 2909  clear 
+ 2910  gtc
+ 2911  ll
+ 2912  ls
+ 2913  themer
+ 2914  zshconfig
+ 2915  siz
+ 2916  clear 
+ 2917  ll
+ 2918  themer
+ 2919  zshconfig
+ 2920  siz
+ 2921  ll
+ 2922  clear
+ 2923  themer
+ 2924  zshconfig
+ 2925  siz
+ 2926  clear 
+ 2927  ll
+ 2928  clear
+ 2929  themer
+ 2930  zshconfig
+ 2931  siz
+ 2932  clear
+ 2933  ll
+ 2934  clear
+ 2935  themer
+ 2936  zshconfig
+ 2937  siz
+ 2938  clear 
+ 2939  ls 
+ 2940  cat 1
+ 2941  rm -rf 1
+ 2942  ls
+ 2943  clear 
+ 2944  themer
+ 2945  zshconfig
+ 2946  siz
+ 2947  clear 
+ 2948  themer
+ 2949  zshconfig
+ 2950  clear 
+ 2951  siz
+ 2952  clear 
+ 2953  ll
+ 2954  clear
+ 2955  themer
+ 2956  nvim config   
+ 2957  ll
+ 2958  themer
+ 2959  zshconfig
+ 2960  clear
+ 2961  siz
+ 2962  clear
+ 2963  ll
+ 2964  ls 
+ 2965  clear 
+ 2966  siz
+ 2967  themer
+ 2968  zshconfig
+ 2969  nvim config    
+ 2970  zshconfig
+ 2971  siz
+ 2972  themer
+ 2973  zshconfig
+ 2974  siz
+ 2975  clear
+ 2976  ll
+ 2977  cd .config
+ 2978  ls
+ 2979  ll
+ 2980  clear 
+ 2981  nvim polybar/config
+ 2982  reboot
+ 2983  ll
+ 2984  sudo pamac install dropbox
+ 2985  yay -S dropbox
+ 2986  df
+ 2987  df -hT
+ 2988  df -hT | grep -v tmpfs
+ 2989  df -hT | grep -v tmpfs | grep -v loop
+ 2990  clear 
+ 2991  ls -tlr 
+ 2992  w
+ 2993  clear 
+ 2994  cd 
+ 2995  cd Downloads
+ 2996  ls
+ 2997  clear
+ 2998  unzip DankMono.zip
+ 2999  ls
+ 3000  rm -rf __MACOSX DankMono.zip
+ 3001  ll
+ 3002  clear
+ 3003  clear 
+ 3004  sudo mv *ttf /usr/share/fonts/TTF/
+ 3005  ll
+ 3006  sudo mv *otf /usr/share/fonts/TTF/
+ 3007  clear 
+ 3008  fc-cache -fv
+ 3009  gtc
+ 3010  ls
+ 3011  clear 
+ 3012  ls
+ 3013  cd termite
+ 3014  ls
+ 3015  nvim config
+ 3016  ll
+ 3017  gtc
+ 3018  ls
+ 3019  cd termite
+ 3020  ll
+ 3021  nvim config
+ 3022  exit
+ 3023  ll
+ 3024  clear 
+ 3025  gtc 
+ 3026  cd termite
+ 3027  nvim config
+ 3028  exit
+ 3029  ll
+ 3030  gtc
+ 3031  ls
+ 3032  clear
+ 3033  cd termite
+ 3034  nvim config
+ 3035  exit
+ 3036  ll
+ 3037  clear 
+ 3038  ll
+ 3039  ls -1
+ 3040  reboot
+ 3041  gtc
+ 3042  cd awesome
+ 3043  ls
+ 3044  nvim rc.lua
+ 3045  reboot
+ 3046  clones
+ 3047  cd dope
+ 3048  ls
+ 3049  clear
+ 3050  git clone https://github.com/larsenwork/monoid
+ 3051  ll
+ 3052  cd monoid
+ 3053  ls
+ 3054  clear
+ 3055  ll
+ 3056  cd cd Mon
+ 3057  cd Monoisome
+ 3058  ls
+ 3059  sudo mv Monoisome-Regular.ttf /usr/share/fonts/TTF
+ 3060  fcache -fv
+ 3061  fc-cache -fv
+ 3062  ll
+ 3063  gtc
+ 3064  cd termite
+ 3065  ll
+ 3066  clear
+ 3067  nvim config
+ 3068  clear
+ 3069  reboot
+ 3070  ll
+ 3071  gtc
+ 3072  cd termite
+ 3073  nvim config
+ 3074  ll
+ 3075  clear 
+ 3076  ls
+ 3077  clones
+ 3078  cd moderncpp
+ 3079  ls
+ 3080  clear
+ 3081  git status
+ 3082  clear 
+ 3083  bitch
+ 3084  lazygit "added .ccls file for coc.nvim"
+ 3085  clear 
+ 3086  ls
+ 3087  cd ehh
+ 3088  ls
+ 3089  clear 
+ 3090  nvim InitializerClass.cpp
+ 3091  clear 
+ 3092  ls -a
+ 3093  cd ..
+ 3094  ll
+ 3095  ls -a
+ 3096  cp .ccls ehh
+ 3097  ll
+ 3098  clear
+ 3099  cd ehh
+ 3100  ll
+ 3101  clear
+ 3102  nvim InitializerClass.cpp
+ 3103  clear 
+ 3104  nvim .ccls
+ 3105  clear 
+ 3106  ll
+ 3107  clear 
+ 3108  sudo pacman -S clang
+ 3109  clear 
+ 3110  ls
+ 3111  nvim InitializerClass.cpp
+ 3112  sudo pacman -S ccls
+ 3113  nvim InitializerClass.cpp
+ 3114  ls
+ 3115  ip a
+ 3116  systemctl status sshd
+ 3117  sudo systemctl start sshd
+ 3118  clear
+ 3119  systemctl status sshd
+ 3120  sudo systemctl enable sshd
+ 3121  clear 
+ 3122  hostname
+ 3123  whoami
+ 3124  clear 
+ 3125  Clones
+ 3126  ls
+ 3127  clear
+ 3128  ll
+ 3129  ls 
+ 3130  cd moderncpp
+ 3131  ls
+ 3132  clear
+ 3133  ll
+ 3134  cd sfml
+ 3135  ls
+ 3136  exit
+ 3137  reboot
+ 3138  ps -ef | grep termite
+ 3139  killall termite
+ 3140  df -hT | grep -v tmpfs | grep -v loop
+ 3141  sudo pacman -R dropbox
+ 3142  clear 
+ 3143  df -hT | grep -v tmpfs | grep -v loop
+ 3144  cd Dropbox
+ 3145  ls
+ 3146  cd ..
+ 3147  ll
+ 3148  rm -rf Dropbox
+ 3149  ls
+ 3150  clear 
+ 3151  cd Dropbox
+ 3152  ll
+ 3153  cd ..
+ 3154  ll
+ 3155  rm -rf Dropbox
+ 3156  sudo rm -rf Dropbox
+ 3157  ls
+ 3158  clear 
+ 3159  df -hT | grep -v tmpfs | grep -v loop
+ 3160  clear 
+ 3161  reboot
+ 3162  sudo pacman -Sy xorg-xrandr feh cronie
+ 3163  fed
+ 3164  feh
+ 3165  ls 
+ 3166  clear
+ 3167  sudo pacman -Sy xorg-xrandr cronie
+ 3168  clear 
+ 3169  clones
+ 3170  cd dope
+ 3171  ls
+ 3172  clear 
+ 3173  git clone https://github.com/adi1090x/dynamic-wallpaper.git
+ 3174  cd dynamic-wallpaper
+ 3175  ls
+ 3176  clear
+ 3177  chmod +x test.sh
+ 3178  ./test.sh
+ 3179  ./test.sh beach
+ 3180  dwall
+ 3181  clear 
+ 3182  ls
+ 3183  ./test.sh images/beach
+ 3184  chmod +x install.sh
+ 3185  ./install.sh
+ 3186  dwall
+ 3187  dwall -s firewatch
+ 3188  clear 
+ 3189  sudo systemctl enable cronie.service --now
+ 3190  systemctl status cronie
+ 3191  sudo systemctl status cronie
+ 3192  echo "$SHELL | $DISPLAY | $DESKTOP_SESSION | $DBUS_SESSION_BUS_ADDRESS | $XDG_RUNTIME_DIR"
+ 3193  siz
+ 3194  clear 
+ 3195  crontab -e
+ 3196  echo "$SHELL | $DISPLAY | $DESKTOP_SESSION | $DBUS_SESSION_BUS_ADDRESS | $XDG_RUNTIME_DIR"
+ 3197  ll /usr/share/dynamic-wallpaper/images
+ 3198  clear 
+ 3199  lw 
+ 3200  ls 
+ 3201  ls -tlr 
+ 3202  w
+ 3203  clear 
+ 3204  crontab -l
+ 3205  reboot
+ 3206  cd .config
+ 3207  ls
+ 3208  cd awesome
+ 3209  nvim rc.lua
+ 3210  mkdir ~/Pictures/dwall
+ 3211  nvim rc.lua
+ 3212  cp -rv /usr/share/dynamic-wallpaper/images/* ~/Pictures/dwall
+ 3213  ls
+ 3214  clear 
+ 3215  ll
+ 3216  history | grep feh
+ 3217  clones
+ 3218  ll
+ 3219  clear 
+ 3220  cd dope/dynamic-wallpaper
+ 3221  ls
+ 3222  clnvi install.sh
+ 3223  nvim install.sh
+ 3224  cd ..
+ 3225  cp -rpv dynamic-wallpaper ~/.config/
+ 3226  ll
+ 3227  clear 
+ 3228  cd
+ 3229  cd .config/dynamic-wallpaper
+ 3230  ll
+ 3231  clear 
+ 3232  ll
+ 3233  nvim dwall.sh
+ 3234  dwall
+ 3235  dwall -s firewatch
+ 3236  cd ../awesome
+ 3237  nvim rc.lua
+ 3238  reboot
+ 3239  cd .config/awesome
+ 3240  ls
+ 3241  nvim rc.lua
+ 3242  clear 
+ 3243  highlight Normal ctermbg-none
+ 3244  nvim rc.lua
+ 3245  gnv
+ 3246  ls
+ 3247  clear
+ 3248  nvim settings.vim
+ 3249  nvim coc.vim
+ 3250  nvim plugins.vim
+ 3251  nvim settings.vim
+ 3252  clear
+ 3253  nvim settings.vim
+ 3254  nixos
+ 3255  nix
+ 3256  sudo pacman -R nix
+ 3257  yay -S nixos-git
+ 3258  nvim settings.vim 
+ 3259  nvim settings.vim
+ 3260  ls 
+ 3261  clear 
+ 3262  cd dotfiles
+ 3263  ls
+ 3264  clear
+ 3265  git pull
+ 3266  bitch
+ 3267  git pull
+ 3268  clear 
+ 3269  ls 
+ 3270  clear 
+ 3271  clones
+ 3272  ls 
+ 3273  cd 
+ 3274  .config/nvim 
+ 3275  ls
+ 3276  ll
+ 3277  cp -vr ~/Clones/dotfiles/neovim/*  .
+ 3278  ll
+ 3279  rm -rf nvim init.vim
+ 3280  cp -vr ~/Clones/dotfiles/neovim/*  .
+ 3281  ll
+ 3282  nvim init.vim
+ 3283  ls
+ 3284  sudo pacman -S steam
+ 3285  clear
+ 3286  cd ../alacritty
+ 3287  ls
+ 3288  nvim alacritty.yml
+ 3289  ls
+ 3290  sudo pacman -Sy monogame
+ 3291  sudo pamac install monogame
+ 3292  yay -S monograme
+ 3293  yay -S monogame
+ 3294  ls
+ 3295  clear 
+ 3296  atd
+ 3297  atq
+ 3298  crontab -l
+ 3299  dwall --help
+ 3300  cd moderncpp
+ 3301  ls
+ 3302  clear 
+ 3303  ll
+ 3304  ls 
+ 3305  clear
+ 3306  mkdir Pro
+ 3307  cd Po
+ 3308  cd Pro
+ 3309  ls
+ 3310  nvim Employee.cpp
+ 3311  clear 
+ 3312  bitch
+ 3313  clear
+ 3314  lazygit "Employee class." 
+ 3315  git pull
+ 3316  clear
+ 3317  gp
+ 3318  git log -p -2
+ 3319  ls 
+ 3320  clear 
+ 3321  git status
+ 3322  git log -p -2
+ 3323  clear 
+ 3324  crontab -l 
+ 3325  clear 
+ 3326  clones
+ 3327  ls
+ 3328  cd moderncsharp
+ 3329  ls
+ 3330  clear 
+ 3331  git pull
+ 3332  bitch
+ 3333  clear
+ 3334  ls
+ 3335  git status
+ 3336  lazygit "Yeah, add the matrix." 
+ 3337  ls 
+ 3338  clear
+ 3339  sudo pacman -Syyu
+ 3340  ls 
+ 3341  reboot
+ 3342  ls 
+ 3343  cd Pictures
+ 3344  ls
+ 3345  cd dwall
+ 3346  ls
+ 3347  dwall -s forest
+ 3348  dwall -s gradient
+ 3349  dwall -s mojave
+ 3350  dwall -s room
+ 3351  dwall -s aurora
+ 3352  dwall -s beach
+ 3353  dwall -s street
+ 3354  dwall -s moon
+ 3355  ls 
+ 3356  dwall -s island
+ 3357  dwall -s earth
+ 3358  dwall -s market
+ 3359  dwall -s tokyo
+ 3360  dwall -s home
+ 3361  dwall -s desert
+ 3362  dwall -s lakeside
+ 3363  dwall -s earth
+ 3364  ll
+ 3365  ls
+ 3366  dwall -s exodus
+ 3367  dwall -s colony
+ 3368  dwall -s chihuahuan
+ 3369  ls 
+ 3370  clear 
+ 3371  cd
+ 3372  clear 
+ 3373  clones
+ 3374  ll
+ 3375  ls 
+ 3376  cd moderncsharp
+ 3377  ls
+ 3378  clear 
+ 3379  ll
+ 3380  cd Matrix
+ 3381  ls
+ 3382  clear 
+ 3383  cd ..
+ 3384  ls
+ 3385  clear 
+ 3386  ls 
+ 3387  clear 
+ 3388  cd
+ 3389  cd Pictures
+ 3390  ll
+ 3391  cd Wallpaper
+ 3392  ll
+ 3393  ls
+ 3394  dwall -s 0104.jpg
+ 3395  cd ..
+ 3396  ls
+ 3397  cd Wallpaper
+ 3398  ls
+ 3399  which dwall
+ 3400  file $(which dwall)
+ 3401  nvim /usr/share/dynamic-wallpaper/dwall.sh
+ 3402  clear
+ 3403  sudo pacman -S samba
+ 3404  ls 
+ 3405  clear 
+ 3406  sudo nvim /etc/fstab
+ 3407  clear
+ 3408  sudo mkdir /srv/EGUN
+ 3409  sudo chmod 0777 /srv/EGUN
+ 3410  clear 
+ 3411  sudo mount -a -v
+ 3412  ssh tata@10.0.1.10
+ 3413  ssh tata@10.0.1.121
+ 3414  ls
+ 3415  cd ..
+ 3416  ls
+ 3417  sudo nvim /etc/fstab
+ 3418  clear 
+ 3419  rsync -avz -e ssh tata@10.0.1.121:/etc/fstab /var/tmp
+ 3420  cd /var/tmp
+ 3421  ls
+ 3422  clear 
+ 3423  cat fstab
+ 3424  sudo nvim /etc/fstab
+ 3425  sudo -s
+ 3426  cd
+ 3427  clear
+ 3428  emacs
+ 3429  sudo pacman -S racket
+ 3430  sudo pacman -S raku
+ 3431  ruby --version
+ 3432  clear 
+ 3433  sudo pamac search raku
+ 3434  sudo pamac install rakudo-star
+ 3435  sudo pacman -S rakudo-star
+ 3436  sudo pacman -S rakudo
+ 3437  sudo pacman -S perl6
+ 3438  sudo pamac install rakudo-star
+ 3439  yay -S rakudo-star
+ 3440  ls
+ 3441  mount
+ 3442  mount | grep usb
+ 3443  lsusb
+ 3444  udev
+ 3445  dmesg
+ 3446  sudo dmesg
+ 3447  df -hT
+ 3448  clear
+ 3449  fdisk -l /dev/sdb
+ 3450  sudo -s
+ 3451  dl3q4 
+ 3452  clear
+ 3453  paru
+ 3454  pacman -S paru
+ 3455  sudo pacman -S paru
+ 3456  sudo pacman -Syyu
+ 3457  reboot
+ 3458  clones
+ 3459  lls
+ 3460  clear 
+ 3461  ls
+ 3462  cd modernpy
+ 3463  bitch
+ 3464  git pull
+ 3465  clear 
+ 3466  django-admin
+ 3467  python -m pip install Django
+ 3468  python3 -m pip install Django
+ 3469  bpython3
+ 3470  pip3 install ptpython
+ 3471  sudo pacman -Sy bpython3
+ 3472  sudo pacman -Sy bpython
+ 3473  clear 
+ 3474  pip3 install bpython3
+ 3475  pip3 install bpython
+ 3476  bpython3
+ 3477  ptpython
+ 3478  shutdown -h now
+ 3479  scp /etc/fstab ojubo@10.0.1.220:/var/tmp
+ 3480  cat /etc/fstab
+ 3481  whoami
+ 3482  clear 
+ 3483  cd Documents
+ 3484  ls
+ 3485  clear 
+ 3486  ll
+ 3487  cat xmonad_config_notes
+ 3488  clear 
+ 3489  ls
+ 3490  cat zsh_goodness
+ 3491  clear 
+ 3492  ll
+ 3493  mkdir ~/Clones/dotfiles/Strags
+ 3494  mv * ~/Clones/dotfiles/Strags
+ 3495  ls
+ 3496  clear
+ 3497  cd ../
+ 3498  ls
+ 3499  cd Pictures
+ 3500  ls
+ 3501  mkdir ~/Clones/dotfiles/Wallpapers
+ 3502  cp -rpv * ~/Clones/dotfiles/Wallpapers
+ 3503  cd ~/Clones/dotfiles/Wallpapers
+ 3504  ls
+ 3505  cd..
+ 3506  cd ..
+ 3507  git status
+ 3508  bitch
+ 3509  lazygit "Updated dots"
+ 3510  git pull
+ 3511  gp
+ 3512  clear 
+ 3513  ls
+ 3514  cd
+ 3515  clear
+ 3516  ll
+ 3517  cat termite-config
+ 3518  cp termite-config ~/Clones/dotfiles/Strags
+ 3519  ls
+ 3520  ls -a
+ 3521  cat ~/.dmrc
+ 3522  cp -rpv .aliases* ~/Clones/dotfiles/Strags/
+ 3523  cp -rpv ~/.xmonad ~/Clones/dotfiles/Strags
+ 3524  ls
+ 3525  cd .config
+ 3526  ls
+ 3527  clear 
+ 3528  ls
+ 3529  cp -rpv xmobar ~/Clones/dotfiles/Strags
+ 3530  ls
+ 3531  cp -rpv polybar picom termite dynamic-wallpaper fish ~/Clones/dotfiles/Strags
+ 3532  clear 
+ 3533  cd clear
+ 3534  cd ~/Clones
+ 3535  ls
+ 3536  clear
+ 3537  ll
+ 3538  cd dotfiles
+ 3539  lazygit "Updated dots"
+ 3540  clear
+ 3541  ll
+ 3542  logout
+ 3543  reboot
+ 3544  ls 
+ 3545  sudo -s 
+ 3546  emacs
+ 3547  sudo pacman -S fonts-firacode
+ 3548  sudo pacman -S firacode
+ 3549  sudo pamac search firacode
+ 3550  sudo pamac install ttf-firacode
+ 3551  sudo pamac install ttf-cantarell
+ 3552  sudo pamac search cantarell
+ 3553  git
+ 3554  ls
+ 3555  clear
+ 3556  mv ~/.emacs.d{,.bak}
+ 3557  mv ~/.doom.d{,.bak}
+ 3558  ls
+ 3559  clear 
+ 3560  l
+ 3561  clear 
+ 3562  git clone https://github.com/daviwil/emacs-from-scratch ~/.emacs.d
+ 3563  mkdir ~/.emacs.d/exwm
+ 3564  cd ~/.emacs.d/exwm
+ 3565  ls
+ 3566  cat EXWM.desktop
+ 3567  nvim EXWM.desktop
+ 3568  whomai
+ 3569  whoami
+ 3570  nvim EXWM.desktop 
+ 3571  ack -r daviwil
+ 3572  nvim start-exwm.sh
+ 3573  ls
+ 3574  clear 
+ 3575  ls
+ 3576  cat Xmodmap
+ 3577  ls 
+ 3578  cd ..
+ 3579  ls
+ 3580  ack -r daviwil
+ 3581  nvim Desktop.org
+ 3582  emacs Desktop.
+ 3583  emacs Desktop.org
+ 3584  clear 
+ 3585  ack -r spice-vdagent
+ 3586  hostname
+ 3587  sudo ln -s ~/.emacs.d/exwm/EXWM.desktop /usr/share/xsessions/EXWM.desktop
+ 3588  ls /usr/share/xsessions
+ 3589  ln --help 
+ 3590  ls
+ 3591  clear 
+ 3592  sudo ln -f ~/.emacs.d/exwm/EXWM.desktop /usr/share/xsessions/EXWM.desktop
+ 3593  reboot
+ 3594  ls 
+ 3595  clear 
+ 3596  clones
+ 3597  ls
+ 3598  bitch
+ 3599  clear 
+ 3600  cd dotfiles
+ 3601  ls
+ 3602  cd emacs
+ 3603  ll
+ 3604  cp -rpv ~/.emacs.d* .
+ 3605  ll
+ 3606  mv .emacs.d emacs.d
+ 3607  mv .emacs.d.bak emacs.d.doom.bak
+ 3608  ls
+ 3609  clear 
+ 3610  ll
+ 3611  #lazygit "Adding emacs.d configs"
+ 3612  cd emacs.d
+ 3613  rm -rf .git .github 
+ 3614  ls
+ 3615  ls -a
+ 3616  cat .gitignore
+ 3617  clear 
+ 3618  rm -rf .gitignore
+ 3619  ll
+ 3620  cd ..
+ 3621  ls
+ 3622  cd emacs.d.doom.bak
+ 3623  ls -a
+ 3624  rm -rf .git*
+ 3625  ls
+ 3626  clear 
+ 3627  cd ..
+ 3628  lazygit "Adding emacs.d configs"
+ 3629  ll
+ 3630  history
+ 3631  clear 
