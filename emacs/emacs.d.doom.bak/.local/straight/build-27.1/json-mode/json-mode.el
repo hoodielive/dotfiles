@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/json-mode/json-mode.el

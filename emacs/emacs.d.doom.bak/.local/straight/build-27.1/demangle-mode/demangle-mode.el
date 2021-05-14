@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/demangle-mode/demangle-mode.el

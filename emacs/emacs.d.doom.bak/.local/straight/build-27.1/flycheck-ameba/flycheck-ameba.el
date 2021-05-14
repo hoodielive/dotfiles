@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/ameba.el/flycheck-ameba.el

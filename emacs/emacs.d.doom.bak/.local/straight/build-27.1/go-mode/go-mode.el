@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/go-mode.el/go-mode.el

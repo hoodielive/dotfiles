@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/emacs-crystal-mode/crystal-mode.el

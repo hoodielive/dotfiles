@@ -1,0 +1,1 @@
+/home/abifoluwa/.emacs.d/.local/straight/repos/tide/tsserver/lib.es2019.d.ts
