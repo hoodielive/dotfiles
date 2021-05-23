@@ -2,7 +2,7 @@
 
 # put sbin in PATH
 export PATH="/usr/local/sbin:$PATH"
-export PATH=/home/arjuna/.local/bin:$PATH
+export PATH=/home/$USER/.local/bin:$PATH
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
 
 # nim
-export PATH=/home/arjuna/.local/nim-1.4.2/bin:$PATH
+export PATH=/home/$USER/.local/nim-1.4.2/bin:$PATH
 
 # emacs
 # emacs that bitch mac is making your life hell
@@ -60,7 +60,7 @@ alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
 alias install="sudo apt install $1"
 
 # Manage Neovim.
-export PATH=/home/arjuna/.nvim-linux64/bin:$PATH
+export PATH=/home/$USER/.nvim-linux64/bin:$PATH
 alias nv="nvim ~/.config/nvim/init.vim"
 alias nv2="nvim ~/.config/nvim/settings.vim"
 alias nvp="nvim ~/.config/nvim/plugins.vim"
@@ -90,12 +90,12 @@ alias gitssh="ssh-add ~/.ssh/git_ecdsa && ssh -T git@github.com"
 alias bitch="eve; gitssh"
 alias oa="nvim ~/.aliases.zsh"
 alias blackmagus="ssh blackmagus@blackmagus"
-alias hyperconfig="nvim /mnt/c/Users/Abifoluwa/AppData/Roaming/Hyper/.hyper.js"
-alias code="/mnt/c/Users/abifoluwa/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
-alias love="/mnt/c/Program\ Files/LOVE/love.exe"
+#alias hyperconfig="nvim /mnt/c/Users/$USER/AppData/Roaming/Hyper/.hyper.js"
+#alias code="/mnt/c/Users/$USER/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
+#alias love="/mnt/c/Program\ Files/LOVE/love.exe"
 
 # Downloads
-alias downloads="cd /mnt/c/Users/Abifoluwa/Downloads"
+alias downloads="cd /mnt/c/Users/$USER/Downloads"
 alias downloads="cd ~/Downloads"
 
 # ctags based on distribution
@@ -125,5 +125,5 @@ if [[ "$TERM" == "dumb" ]]; then
 fi
 
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-export PATH="/home/awo/.local/bin:$PATH"
-export PATH="/home/arjuna/.config/composer/vendor/bin:$PATH"
+export PATH="/home/$USER/.local/bin:$PATH"
+export PATH="/home/$USER/.config/composer/vendor/bin:$PATH"
