@@ -2,10 +2,10 @@
 
 # put sbin in PATH
 export PATH="/usr/local/sbin:$PATH"
-export PATH=/home/$USER/.local/bin:$PATH
+export PATH=/home/abifoluwa/.local/bin:$PATH
 
 # rust
-export PATH="$PATH:$HOME/.cargo/bin"
+# export PATH="$PATH:$HOME/.cargo/bin"
 
 # go
 export GOPATH=$HOME/.config/go
@@ -16,17 +16,15 @@ export PATH=$PATH:$GOPATH
 # node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Loads nvm bash_completion
 
 # nim
-export PATH=/home/$USER/.local/nim-1.4.2/bin:$PATH
+export PATH=/home/abifoluwa/.local/nim-1.4.2/bin:$PATH
 
 # emacs
 # emacs that bitch mac is making your life hell
 # export PATH="$PATH:/usr/local/bin/emacs"
 # export EDITOR='emacsclient -a ~/.shut-up-emacs-client.sh'
-export EDITOR="nvim"
-export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # Remove all these eff'n Windows bin(s) from $PATH:
 export PATH=$(echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':')
@@ -46,9 +44,10 @@ export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # PDK is being a dick. So lets add the little fucker to $PATH
+
 export PATH=/usr/local/bin:$PATH
 
-# Configuration Management.
+# Manage Configurations.
 alias gtc="cd ~/.config"
 
 # Puppet aliases.
@@ -60,14 +59,14 @@ alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
 alias install="sudo apt install $1"
 
 # Manage Neovim.
-export PATH=/home/$USER/.nvim-linux64/bin:$PATH
+export EDITOR="nvim"
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
 alias nv="nvim ~/.config/nvim/init.vim"
-alias nv2="nvim ~/.config/nvim/settings.vim"
+alias nvs="nvim ~/.config/nvim/settings.vim"
 alias nvp="nvim ~/.config/nvim/plugins.vim"
-alias mappings="nvim ~/.config/nvim/mappings.vim"
 alias nvu="nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins"
 alias nvi="nvim +PlugInstall"
-alias nvc="nvim ~/.config/nvim/coc.vim"
 alias gnv="cd ~/.config/nvim"
 
 # DB aliases.
@@ -80,8 +79,6 @@ alias nvi="nvim"
 alias emacs="emacs -nw"
 alias clones="cd ~/Clones"
 alias themer="ls ~/.oh-my-zsh/themes"
-alias dope="cd ~/Clones/dope"
-alias dopel="ll ~/Clones/dope"
 alias vlrst=clear
 alias hl="highlight"
 alias eve="eval $(ssh-agent -s)"
@@ -89,13 +86,14 @@ alias siz="source ~/.zshrc && echo Sourced Master!"
 alias gitssh="ssh-add ~/.ssh/git_ecdsa && ssh -T git@github.com"
 alias bitch="eve; gitssh"
 alias oa="nvim ~/.aliases.zsh"
+alias ora="nvim ~/.config/ranger/rc.conf"
 alias blackmagus="ssh blackmagus@blackmagus"
-#alias hyperconfig="nvim /mnt/c/Users/$USER/AppData/Roaming/Hyper/.hyper.js"
-#alias code="/mnt/c/Users/$USER/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
-#alias love="/mnt/c/Program\ Files/LOVE/love.exe"
+alias hyperconfig="nvim ~/.hyper.js"
+alias wn="nitrogen --set-zoom-fill --random ~/Pictures/Wallpaper"
+alias v="nvim"
 
 # Downloads
-alias downloads="cd /mnt/c/Users/$USER/Downloads"
+alias downloads="cd /mnt/c/Users/Abifoluwa/Downloads"
 alias downloads="cd ~/Downloads"
 
 # ctags based on distribution
@@ -125,5 +123,6 @@ if [[ "$TERM" == "dumb" ]]; then
 fi
 
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-export PATH="/home/$USER/.local/bin:$PATH"
-export PATH="/home/$USER/.config/composer/vendor/bin:$PATH"
+export PATH="/home/awo/.local/bin:$PATH"
+export PATH="/home/abifoluwa/.config/composer/vendor/bin:$PATH"
+export PATH=/home/abifoluwa/.nimble/bin:/home/abifoluwa/.config/composer/vendor/bin:/home/awo/.local/bin:/usr/local/opt/php@7.3/sbin:/usr/local/bin:/usr/local/opt/llvm/bin:/usr/local/opt/llvm@6/bin:/opt/puppetlabs/bin:/home/abifoluwa/.local/nim-1.4.2/bin:/home/abifoluwa/.nvm/versions/node/v15.4.0/bin:/home/abifoluwa/.local/bin:/usr/local/sbin:/home/abifoluwa/.rbenv/shims:/home/abifoluwa/.rbenv/bin:/home/abifoluwa/.cargo/bin:/home/abifoluwa/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/cuda/bin:/opt/cuda/integration/nsight-compute:/opt/cuda/integration/nsight-systems:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/abifoluwa/.fzf/bin:/home/abifoluwa/.config/go/bin:/home/abifoluwa/.config/go:
