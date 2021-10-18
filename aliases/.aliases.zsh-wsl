@@ -1,5 +1,9 @@
 # Exports
 
+# Rakudo.
+export PATH=/opt/rakudo-pkg/bin:$PATH
+export PATH=~/.raku/bin:$PATH
+
 # put sbin in PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=/home/arjuna/.local/bin:$PATH
@@ -21,6 +25,10 @@ export NVM_DIR="$HOME/.nvm"
 # nim
 export PATH=/home/arjuna/.local/nim-1.4.2/bin:$PATH
 alias gen=~/.nimble/bin/gen
+alias nimlsp=~/.nimble/pkgs/nimlsp-0.3.2/nimlsp
+export PATH=/home/arjuna/.nimble/pkgs:$PATH
+
+export PATH=/home/arjuna/.local/.nimble/bin:$PATH
 
 # emacs
 # emacs that bitch mac is making your life hell
@@ -81,7 +89,7 @@ alias solc="~/.nvm/versions/node/v15.12.0/bin/solcjs"
 alias mv="mv -v"
 alias cp="cp -v"
 alias nvi="nvim"
-alias emacs="emacs -nw"
+#alias emacs="emacs -nw"
 alias clones="cd ~/Clones"
 alias themer="ls ~/.oh-my-zsh/themes"
 alias dope="cd ~/Clones/dope"
@@ -129,7 +137,10 @@ if [[ "$TERM" == "dumb" ]]; then
 fi
 
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-export PATH="/home/awo/.local/bin:$PATH"
 export PATH="/home/arjuna/.config/composer/vendor/bin:$PATH"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
+eval "$(starship init zsh)"
+
 clones
 bitch
