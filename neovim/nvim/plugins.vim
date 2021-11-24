@@ -112,7 +112,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'OmniSharp/omnisharp-roslyn' " Do I need this?
 
 " LanguageClient-Neovim (get rid of gutter)
-Plug 'autozimu/LanguageClient-neovim'
+" Plug 'autozimu/LanguageClient-neovim'
 
 " Ale linter to get on that ass when you're wrong.
 " Plug 'dense-analysis/ale'
