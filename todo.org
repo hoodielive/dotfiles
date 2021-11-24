@@ -1,0 +1,39 @@
+#+TITLE: TodoList
+
+* Update:
+** 2021-11-24
+I am moving toward a guix/guile (lisp, scheme) based home directory.
+I want emacs to be driver for both windows/editing/dev work.
+I want my system to be beautiful: fonts, gruvbox or doom themed.
+I want the Windows Manager to be EXWM and/or sway.
+I am experimenting on VM, Dell e6220, Lenovo t430s as test. The final resting place will be x230 or x260.
+
+*** Intentions:
+- Master guile scheme.
+- Immerse and increase understanding of declarative and functional modes of programming.
+- Adopt a minimalistic approach.
+- Understand GNU core.
+- Deep dive into GNU Build-Systems: GNU, python, cmake, node, etc.,
+
+*** Past Conventions
+1. Create aliases for greater modularity relative to new vim configurations. See 'source $HOME in init.vim'.
+2. Figure out why the damn pylint invocation happens at the onset of a python project/file/working.
+3. Configure airline.
+4. Purge duplicate configurations interspersed via the 3 files in '~/.config/nvim' and Organize by sections C# Go, etc,.
+5. Purge useless and non-useful plugins.
+6. Rectify issue with colorschemes.
+7. Bring greater integration with tmux as this is useful for coming projects.
+8. Find lsp for nimlsp as there seems to be an error with getting CocConfig to sync with it.
+9. What is the issue with the '+PlugUpdate +PlugClean +UpdateRemotePlugins' modes in neovim. Note: Perhaps we should purge and reseat the directory.
+10. What is up with gopls plugin?
+11. Research more agile methods.
+12. The fuck is up with hyper.js?
+		-> [ Please fix font issues ] [ Are you telling me that I have to install tmux for split screens? ]
+13. Git projects on windows - tightly integrated between wsl - read wsl book.
+14. Integrate Unity with Omnisharp for Unity Projects.
+15. How do you autocomplete with coc.nvim?
+16. IRC client setup.
+17. Get Ranger previews working with ueberzug.
+18. What is wrong with the ranger icons on Arch Linux? 
+
+
