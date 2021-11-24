@@ -90,7 +90,7 @@ alias gitssh="ssh-add ~/.ssh/git_ecdsa && ssh -T git@github.com"
 alias bitch="eve; gitssh"
 alias oa="nvim ~/.aliases.zsh"
 alias blackmagus="ssh blackmagus@blackmagus"
-#alias hyperconfig="nvim /mnt/c/Users/$USER/AppData/Roaming/Hyper/.hyper.js"
+alias hyperconfig="nvim /mnt/c/Users/$USER/AppData/Roaming/Hyper/.hyper.js"
 #alias code="/mnt/c/Users/$USER/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
 #alias love="/mnt/c/Program\ Files/LOVE/love.exe"
 

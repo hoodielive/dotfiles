@@ -19,3 +19,17 @@ TodoList
 16. IRC client setup.
 17. Get Ranger previews working with ueberzug.
 18. What is wrong with the ranger icons on Arch Linux? 
+
+
+# 2021-11-24
+I am moving toward a guix/guile (lisp, scheme) based home directory. 
+I want emacs to be driver for both windows/editing/dev work. 
+I want my system to be beautiful: fonts, gruvbox or doom themed.
+I want the Windows Manager to be EXWM and/or sway. 
+I am experimenting on VM, Dell e6220, Lenovo t430s as test. The final resting place will be x230 or x260. 
+
+- Master guile scheme. 
+- Immerse and increase understanding of declarative and functional modes of programming. 
+- Adopt a minimalistic approach. 
+- Understand GNU core. 
+- Deep dive into GNU Build-Systems: GNU, python, cmake, node, etc., 
