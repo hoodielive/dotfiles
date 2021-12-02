@@ -84,6 +84,7 @@ Passwords/Creds.
 + C/C++
 + C#
 + Zig
++ ZSH/BASH
 ** TODO Shell Access
 Settle whether or not Vterm, Shell, Eshell, etc., are best for you.
 ** TODO Is there something better than tramp?
@@ -140,8 +141,9 @@ Tags are used to filter all tasks to find anything actionable in a particular co
 #+end_src
 
 * Interesting packages
-1. poppers.el | popper-mode :: (deal with buffers - popups)
-2. perspective.el :: (deal with buffers - popups)
-3. vertigo :: (autocompletion)
-4. confluence el
-5. jira-org
+1. poppers.el | popper-mode :: (deal with buffers - popups).
+2. perspective.el :: (deal with buffers - popups).
+3. vertigo :: (autocompletion).
+4. confluence el.
+5. jira-org.
+6. ripgrep (rg.el).
