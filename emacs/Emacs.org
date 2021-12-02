@@ -1,0 +1,130 @@
+#+title: Emacs Configurations
+#+PROPERTY: header-args:emacs-lisp :tangle ./init.el :mkdirp yes
+
+* Lets config this mug.
+#+begin_src emacs-lisp
+(setq inhibit-startup-message t)
+#+end_src
+
+* Make UI as minimal as possible.
+#+begin_src emacs-lisp
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(set-fringe-mode -1)
+(menu-bar-mode -1)
+#+end_src
+
+* Package Management.
+#+begin_src emacs-lisp
+(require 'package)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+#+end_src
+
+* Bootstrap 'use-package'
+#+begin_src emacs-lisp
+(eval-after-load 'gnutls
+  '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem/"))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-when-compile
+  (require 'use-package))
+(require 'bind-key)
+(setq use-package-always-ensure t)
+#+end_src
+
+* Keep everything clean.
+#+begin_src emacs-lisp
+  (setq user-emacs-directory "~/.cache/emacs")
+  (use-package no-littering)
+#+end_src
+
+* Set up the visible bell.
+#+begin_src emacs-lisp
+  (setq visible-bell t)
+  (column-number-mode)
+  (global-display-line-numbers-mode t)
+#+end_src
+
+* Set frame transparency.
+#+being_src emacs-lisp
+(set-frame-parameter (selected-frame) 'alpha egun/frame-transparency)
+(add-to-list 'default-frame-alist `(alpha . ,egun/frame-transparency))
+(set-frame-parameter (selected-frame) 'fullscreen 'maximized)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+#+end_src
+
+* We do not want to have numbers for some modes, namely:
+#+begin_src
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
+  (add-hook-mode (lambda () (display-line-numbers-mode 0))))
+
+set-face-attribute 'default nil :font "Fira Code Retina" :height egun/default-font-size)
+#+end_src
+
+** Theme
+#+begin_src emacs-lisp
+  (use-package doom-themes
+    :ensure t
+    :config
+    ;; Global Settings (defaults)
+    (setq doom-themes-enable-bold t
+	  doom-themes-enable-italic t)
+    (load-theme 'doom-one t)
+
+    ;; Enable flashing mode-line on errors
+    (doom-themes-visual-bell-config)
+    ;; Enable custom neotree theme (all-the-icons must be installed.
+    (doom-themes-neotree-config)
+    ;; or the treemacs users
+    (setq doom-themes-treemacs-theme "doom-atom")
+    (doom-themes-treemacs-config)
+    ;; Corrects (and improves) orgmode native fontification.
+    (doom-themes-org-config))
+#+end_src
+
+** Needs all the icons.
+#+begin_src emacs-lisp
+  (use-package all-the-icons
+    :if (display-graphic-p))
+#+end_src
+
+** I need's evil mode in my life sweet Jesus.
+#+begin_src emacs-lisp
+(require 'evil)
+(evil-mode 1)
+#+end_src
+
+** Try org-superstar config
+#+begin_src
+(use-package org-superstar
+    :after org
+    :hook (org-mode . org-superstar-mode)
+    :config
+      (set-face-attribute 'org-superstar-header-bullet nil :inherit 'fixed-pitched :height 180)
+    :custom
+    ;; set the leading bullet to be a space. For alignment purposes I use an em-quad space (U+2001)
+    (org-superstar-headline-bullets-list '(" "))
+    (org-superstar-todo-bullet-alist '(("DONE" . ?✔)
+                                       ("TODO" . ?⌖)
+                                       ("ISSUE" . ?)
+                                       ("BRANCH" . ?)
+                                       ("FORK" . ?)
+                                       ("MR" . ?)
+                                       ("MERGED" . ?)
+                                       ("GITHUB" . ?A)
+                                       ("WRITING" . ?✍)
+                                       ("WRITE" . ?✍)
+                                       ))
+    (org-superstar-special-todo-items t)
+    (org-superstar-leading-bullet "")
+    )
+#+end_src
