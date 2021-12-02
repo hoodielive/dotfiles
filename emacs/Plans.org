@@ -1,0 +1,94 @@
+#+TITLE: Configure Emacs 
+#+PROPERTY: header-args:emacs-lisp :tangle .emacs.d/lisp/egun-workflow.el
+
+# Conventions: *bold* /italic' _underlined_ =verbatim= ~code~ +strike-through+
+
+This file contains the plans that I have for my emacs configuration. I have chosen
+to place these plans in OrgMode and use 'M-x org-babel-tangle' to generate configs.
+
+* Plans 
+** Use only straight.el if possible.
+This is because of the integration with github. I think this will give me a better
+selction on packages and other cool items that developers contribute to the project.
+** Beautify UI and make it minimal.
+** Add doom-emacs via straight.el and figure how to 'load-theme'.
+This is a real pain in the ass.
+** Use nerdfonts 'DejaVuSansMono Nerd Font Book'.
+This is a dope font.
+** Add support for emoji(s).
+** Add org-mode.
+I don't much about org-room, org-*.
+Also make sure that asterisks and org icons are used in place of regular text.
+**** TODO Find out what this is about.
+** Ivy, Counsel or Vertigo?
+This is another area that requires understanding of this?
+** Mail
+I am unsure what I will use.
+** Calendar
+Can you integrate fantastical into emacs or sync dates with other calendars?
+** TODO Magit/Git
+** Openssl, PGP and GPG Encryption to keep datat safe.
+Passwords/Creds.
+** LSP Support for Programming Languages:
++ Lisp/Scheme and Variants thereof.
+  + Guile
+  + Common Lisp (clisp)
+  + Emacs Lisp (elisp)
++ Nim
++ C/C++
++ C#
++ Zig
+** TODO Shell Access
+Settle whether or not Vterm, Shell, Eshell, etc., are best for you.
+** TODO Is there something better than tramp?
+** Integrate Grammarly into Emacs.
+
+* Organization
+Start and finish.
+
+Keep track of where you are.
+
+Remember your notes. Clean up all the fragments of notes that you have deposited literally,
+everywhere on multiple laptops. How can you sync them all? What is the bridge relative to
+ios, linux, windows (sigh)?
+
+De-stress before moving on: Sometimes, a process can be boring, challenging. The tendency exists
+to abandon the process in favor of something more stimulating. This is potentially a problem because
+You are not transcending - you are avoiding and abandoning - this will have consequences.
+
+* Workflows
+1. =TODO= :: A task that should be done at some point.
+2. =NEXT= :: This task is the next in the workflow or lifecyle of your projects.
+3. =REF= :: Refer to history and backlog.
+4. =WAIT= :: Haught process in lieu of something that is needed or some barrier against completion.
+5. =DONE= :: Finished. It is complete.
+
+#+begin_src emacs-lisp
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
+        (sequence "|" "WAIT(w)" "REF(r)")))
+
+;; TODO: org-todo-keyword-faces
+(setq org-todo-keyword-faces
+      '(("NEXT" . (:foreground "orange red" :weight bold))
+        ("WAIT" . (:foreground "HotPink2" :weight bold))
+        ("REF" . (:foreground "MediumPurple3" :weight bold))))
+#+end_src
+
+** Tags
+Tags are used to filter all tasks to find anything actionable in a particular context.
+1. =followup= :: Someone is waiting on you to follow up so this task should have priori.
+2. =canwait= :: This task low effort but should not be neglected.
+
+#+begin_src emacs-lisp
+;; Configure common tags:
+  (setq org-task-alist
+      '((:startgroup)
+        ; Put mutually exclusive tags here
+        (:endgroup)
+        ("@home" . ?H)
+        ("@work" . ?W)
+        ("canwait" . ?b)
+        ("followup" . ?f)))
+
+#+end_src
