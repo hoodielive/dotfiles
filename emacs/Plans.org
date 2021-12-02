@@ -7,12 +7,58 @@ This file contains the plans that I have for my emacs configuration. I have chos
 to place these plans in OrgMode and use 'M-x org-babel-tangle' to generate configs.
 
 * Plans 
+** Make UI as minimal as possible.
+#+begin_src emacs-lisp
+(setq inhibit-startup-screen t)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(set-fringe-mode -1)
+(menu-bar-mode -1)
+#+end_src
 ** Use only straight.el if possible.
 This is because of the integration with github. I think this will give me a better
 selction on packages and other cool items that developers contribute to the project.
-** Beautify UI and make it minimal.
-** Add doom-emacs via straight.el and figure how to 'load-theme'.
+#+begin_src emacs-lisp
+(defvar bootstrap-version)
+(let ((bootstrap-file
+              (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+            (bootstrap-version 5))
+    (unless (file-exists-p bootstrap-file)
+          (with-current-buffer
+                      (url-retrieve-synchronously
+                                "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+                                         'silent 'inhibit-cookies)
+                  (goto-char (point-max))
+                        (eval-print-last-sexp)))
+      (load bootstrap-file nil 'nomessage))
+#+end_src
+** Set up Evil mode immediately.
+#+begin_src emacs-lisp
+(straight-use-package
+ '(evil :type git
+        :flavor melpa
+        :files
+          (:defaults "doc/build/texinfo/evil.texi"
+          (:exclude "evil-test-helpers.el")
+        "evil-pkg.el")
+        :host github
+        :repo "emacs-evil/evil"))
+(evil-mode)
+#+end_src
+** Beautify UI.
+** Add doom-themes via straight.el and figure how to 'load-theme'.
 This is a real pain in the ass.
+#+begin_src emacs-lisp
+(straight-use-package
+  '(doom-themes :type git
+                :flavor melpa
+                :files
+                  (:defaults "themes/*.el" "doom-themes-pkg.el")
+                :host github
+                :repo "hlissner/emeacs-doom-themes"))
+(load-theme 'doom-gruvbox t)
+#+end_src
 ** Use nerdfonts 'DejaVuSansMono Nerd Font Book'.
 This is a dope font.
 ** Add support for emoji(s).
@@ -92,3 +138,10 @@ Tags are used to filter all tasks to find anything actionable in a particular co
         ("followup" . ?f)))
 
 #+end_src
+
+* Interesting packages
+1. poppers.el | popper-mode :: (deal with buffers - popups)
+2. perspective.el :: (deal with buffers - popups)
+3. vertigo :: (autocompletion)
+4. confluence el
+5. jira-org
