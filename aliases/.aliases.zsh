@@ -1,9 +1,5 @@
 # Exports
 
-# put sbin in PATH
-export PATH="/usr/local/sbin:$PATH"
-export PATH=/home/$USER/.local/bin:$PATH
-
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
@@ -28,56 +24,27 @@ export PATH=/home/$USER/.local/nim-1.4.2/bin:$PATH
 export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
-# Remove all these eff'n Windows bin(s) from $PATH:
-export PATH=$(echo $PATH | tr ':' '\n' | awk '($0!~/mnt\/c/) {print} ' | tr '\n' ':')
-
-# To use the bundled libc++ please add the following LDFLAGS:
-# LDFLAGS="-L/usr/local/opt/llvm@6/lib -Wl,-rpath,/usr/local/opt/llvm@6/lib"
-
-# llvm@6 is keg-only, which means it was not symlinked into /usr/local,
-# because this is an alternate version of another formula.
-
-# If you need to have llvm@6 first in your PATH run:
-export PATH="/usr/local/opt/llvm@6/bin:/opt/puppetlabs/bin:$PATH"
-
-# For compilers to find llvm@6 you may need to set:
-export LDFLAGS="-L/usr/local/opt/llvm@6/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm@6/include"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-# PDK is being a dick. So lets add the little fucker to $PATH
-export PATH=/usr/local/bin:$PATH
-
 # Configuration Management.
 alias gtc="cd ~/.config"
 
 # Puppet aliases.
-alias proot="cd /etc/puppetlabs/puppet"
-alias prod="/etc/puppetlabs/code/environments/production"
-alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
+#alias proot="cd /etc/puppetlabs/puppet"
+#alias prod="/etc/puppetlabs/code/environments/production"
+#alias pmods="cd /etc/puppetlabs/code/environments/production/modules"
 
-# Apt aliases.
-alias install="sudo apt install $1"
+# Package Management aliases.
+alias install="sudo pacman -S $1"
 
 # Manage Neovim.
-export PATH=/home/$USER/.nvim-linux64/bin:$PATH
-alias nv="nvim ~/.config/nvim/init.vim"
-alias nv2="nvim ~/.config/nvim/settings.vim"
-alias nvp="nvim ~/.config/nvim/plugins.vim"
-alias mappings="nvim ~/.config/nvim/mappings.vim"
-alias nvu="nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins"
-alias nvi="nvim +PlugInstall"
-alias nvc="nvim ~/.config/nvim/coc.vim"
+# export PATH=/home/$USER/.nvim-linux64/bin:$PATH
+alias nv="nvim ~/.config/nvim/init.lua"
 alias gnv="cd ~/.config/nvim"
-
-# DB aliases.
-alias pg="pg_ctl"
 
 # Utility aliases.
 alias mv="mv -v"
 alias cp="cp -v"
 alias nvi="nvim"
-alias emacs="emacs -nw"
+#alias emacs="emacs -nw"
 alias clones="cd ~/Clones"
 alias themer="ls ~/.oh-my-zsh/themes"
 alias dope="cd ~/Clones/dope"
@@ -91,11 +58,8 @@ alias bitch="eve; gitssh"
 alias oa="nvim ~/.aliases.zsh"
 alias blackmagus="ssh blackmagus@blackmagus"
 alias hyperconfig="nvim /mnt/c/Users/$USER/AppData/Roaming/Hyper/.hyper.js"
-#alias code="/mnt/c/Users/$USER/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
-#alias love="/mnt/c/Program\ Files/LOVE/love.exe"
 
 # Downloads
-alias downloads="cd /mnt/c/Users/$USER/Downloads"
 alias downloads="cd ~/Downloads"
 
 # ctags based on distribution
@@ -108,13 +72,6 @@ DOTNET_CLI_TELEMETRY_OPTOUT=1
 alias squery="find . -type f -iname '*.srt'"
 alias squerykill="find . -type f -iname '*.srt' -exec rm -rf {} \;"
 
-# Relative to MONGODB
-# ==> Caveats
-#To have launchd start mongodb/brew/mongodb-community now and restart at login:
-#  brew services start mongodb/brew/mongodb-community
-#Or, if you don't want/need a background service you can just run:
-#  mongod --config /usr/local/etc/mongod.conf
-
 # Functions
 # Stop emacs from hanging during tramp mode
 if [[ "$TERM" == "dumb" ]]; then
@@ -123,7 +80,3 @@ if [[ "$TERM" == "dumb" ]]; then
 	PS1='$ '
 	return
 fi
-
-export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-export PATH="/home/$USER/.local/bin:$PATH"
-export PATH="/home/$USER/.config/composer/vendor/bin:$PATH"
