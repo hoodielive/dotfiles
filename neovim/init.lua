@@ -37,9 +37,9 @@ opt.softtabstop = 2
 opt.shiftround = true
 
 -- Sounds like something I want to use lol.
-opt.wildmode = 'longest:full,full'
+opt.wildmode = 'longest:list,full'
 
--- Show me trailing spaces and indents.
+-- Show me invisible characters.
 opt.list = true
 opt.listchars = 'tab:▸ ,trail:·' -- make these beautiful with hack fonts.
 
@@ -84,20 +84,32 @@ opt.showmode = false
 -- Show commands.
 opt.showcmd = true
 
+-- I'd like to have relative numbers.
+opt.relativenumber = true
+
 -- sigh.
 opt.laststatus = 2
+
+-- No double spaces for . ? 
+opt.joinspaces = false
+
+-- Ignore case.
 opt.ignorecase = true
 opt.incsearch = true
 opt.hlsearch = true
 
+-- Do not ignore case with capitals.
+opt.smartcase = true
+
 -- Persistent undo.
 vim.undofile = true
 
--- Set scrolloff to 3.
-opt.scrolloff = 3
+-- Set scrolloff to 4 maybe 8.
+opt.scrolloff = 4
 
--- When we split the screen it should go to the right.
+-- When we split the screen it should go to the right below.
 opt.splitright = true
+opt.splitbelow = true
 
 -- Ask me questions before you overwrite my shit.
 opt.confirm = true
@@ -105,7 +117,8 @@ opt.confirm = true
 -- Show the title.
 opt.title = true
 
--- Show hidden.
+-- Enable background buffers.
+-- Make me more like emacs.. lol
 opt.hidden = true
 
 -- Directory.
@@ -156,10 +169,14 @@ require('packer').startup(function()
   use 'daylerees/colour-schemes'
 end)
 
+opt.termguicolors = true
 opt.background = 'dark'
-cmd 'colorscheme peachpuff'
+cmd 'colorscheme onedark'
 
 -- Configure treesitter.
 local ts = require 'nvim-treesitter.configs'
 ts.setup {ensure_installed = 'maintained', highlight = { enable = true }, indent = { enable = true}}
 
+-- Briefly highlight a yanked line.
+-- But disable in visual mode.
+cmd 'au TextYankPost * lua vim.highlight.on_yank { on_visual = false }'
