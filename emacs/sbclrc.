@@ -1,0 +1,9 @@
+(defun print-condition-hook (conditions hook)
+  "Print this error message (condition) and abort the current operation."
+  (declare (ignore hook))
+  (print condition)
+  (clear-input)
+  (abort))
+
+* debugger-hook*
+(setf *debugger-hook* #'print-condition-hook)
